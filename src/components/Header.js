@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Sign from "./SignIn";
 import icon from "../icon.svg";
 
 export default class Header extends Component {
@@ -15,7 +16,7 @@ export default class Header extends Component {
           placeholder="Tangerang Selatan"
         />
         <div className="d-flex">
-          <button className="btn mr-3 font-weight-bold">Sign In</button>
+          <Sign />
           <button className="btn btn-light font-weight-bold">Sign Up</button>
         </div>
       </div>

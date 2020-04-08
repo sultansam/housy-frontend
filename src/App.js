@@ -7,8 +7,8 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="px-5 pb-5">
-      <Header/>
+    <div className="container px-0 pb-5">
+      <Header />
       <Home/>
     </div>
   );
