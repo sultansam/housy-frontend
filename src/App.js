@@ -5,10 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import "./index.css";
 
-
 function App() {
   return (
-    <div className="px-5">
+    <div className="px-5 pb-5">
       <Header/>
       <Home/>
     </div>

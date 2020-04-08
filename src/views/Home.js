@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
-
 export default class Home extends Component {
   state = {
     startDate: new Date()
@@ -18,22 +16,16 @@ export default class Home extends Component {
     return (
       <>
         <div className="row pt-3">
-          <div className="col-lg-4">
+          <div className="col-lg-4 mb-3">
             <div className="card">
               <div className="card-body">
                 <div className="section mb-4">
                   <h5>Type of Rent</h5>
 
                   <div className="d-flex justify-content-between">
-                    <button className="btn-rent bold">
-                      Day
-                    </button>
-                    <button className="btn-rent bold">
-                      Month
-                    </button>
-                    <button className="btn-rent bold">
-                      Year
-                    </button>
+                    <button className="btn-rent bold">Day</button>
+                    <button className="btn-rent bold">Month</button>
+                    <button className="btn-rent bold">Year</button>
                   </div>
                 </div>
 
@@ -108,10 +100,7 @@ export default class Home extends Component {
                   <h5>Budget</h5>
                   <div className="d-flex align-items-center justify-content-between">
                     <small className="bold">Less than IDR.</small>
-                    <input
-                      className="form-box"
-                      placeholder="8.000.000"
-                    />
+                    <input className="form-box" placeholder="8.000.000" />
                   </div>
                 </div>
 
@@ -124,6 +113,7 @@ export default class Home extends Component {
               <div className="col-lg-4 mb-3 px-2">
                 <div className="card">
                   <div className="card-body p-2">
+                    <div className="category p-2">Furnished</div>
                     <img
                       className="card-img mb-2"
                       src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit"
@@ -142,6 +132,7 @@ export default class Home extends Component {
               <div className="col-lg-4 mb-3 px-2">
                 <div className="card">
                   <div className="card-body p-2">
+                    <div className="category p-2">Furnished</div>
                     <img
                       className="card-img mb-2"
                       src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit"
@@ -160,6 +151,7 @@ export default class Home extends Component {
               <div className="col-lg-4 mb-3 px-2">
                 <div className="card">
                   <div className="card-body p-2">
+                    <div className="category p-2">Furnished</div>
                     <img
                       className="card-img mb-2"
                       src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit"
@@ -178,6 +170,7 @@ export default class Home extends Component {
               <div className="col-lg-4 mb-3 px-2">
                 <div className="card">
                   <div className="card-body p-2">
+                    <div className="category p-2">Furnished</div>
                     <img
                       className="card-img mb-2"
                       src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit"
@@ -196,6 +189,7 @@ export default class Home extends Component {
               <div className="col-lg-4 mb-3 px-2">
                 <div className="card">
                   <div className="card-body p-2">
+                    <div className="category p-2">Furnished</div>
                     <img
                       className="card-img mb-2"
                       src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit"
@@ -214,6 +208,7 @@ export default class Home extends Component {
               <div className="col-lg-4 mb-3 px-2">
                 <div className="card">
                   <div className="card-body p-2">
+                    <div className="category p-2">Furnished</div>
                     <img
                       className="card-img mb-2"
                       src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit"
@@ -232,6 +227,7 @@ export default class Home extends Component {
               <div className="col-lg-4 mb-3 px-2">
                 <div className="card">
                   <div className="card-body p-2">
+                    <div className="category p-2">Furnished</div>
                     <img
                       className="card-img mb-2"
                       src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit"
@@ -250,6 +246,7 @@ export default class Home extends Component {
               <div className="col-lg-4 mb-3 px-2">
                 <div className="card">
                   <div className="card-body p-2">
+                    <div className="category p-2">Furnished</div>
                     <img
                       className="card-img mb-2"
                       src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit"
