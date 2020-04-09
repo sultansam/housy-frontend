@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import {
   Row,
@@ -166,26 +167,28 @@ export default class Home extends Component {
             <Row>
               {data.map(housy => (
                 <Col lg={4} className="mb-3 px-2" key={housy.id}>
-                  <div className="card">
-                    <div className="card-body p-3">
-                      <div className="category p-2">{housy.amenities}</div>
-                      <img
-                        style={{ maxHeight: "150px" }}
-                        className="card-img mb-2"
-                        src={housy.image[2]}
-                        alt=""
-                      />
-                      <p className="bold mb-0">
-                        Rp {housy.price} / {housy.typeofrent}
-                      </p>
-                      <small className="bold">
-                        {housy.bedroom} Beds, {housy.bathroom} Baths,{" "}
-                        {housy.area} ft
-                      </small>
-                      <br />
-                      <small className="bold text-muted">{housy.city}</small>
+                  <Link to={`/detail/${housy.id}`}>
+                    <div className="card">
+                      <div className="card-body p-3">
+                        <div className="category p-2">{housy.amenities}</div>
+                        <img
+                          style={{ maxHeight: "150px" }}
+                          className="card-img mb-2"
+                          src={housy.image[0].src}
+                          alt=""
+                        />
+                        <p className="bold mb-0">
+                          Rp {housy.price} / {housy.typeofrent}
+                        </p>
+                        <small className="bold">
+                          {housy.bedroom} Beds, {housy.bathroom} Baths,{" "}
+                          {housy.area} ft
+                        </small>
+                        <br />
+                        <small className="bold text-muted">{housy.city}</small>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </Col>
               ))}
             </Row>

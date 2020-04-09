@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Modal, Form, FormGroup } from "react-bootstrap";
 
 export default class SignIn extends Component {
@@ -40,12 +41,20 @@ export default class SignIn extends Component {
                   Password
                 </label>
                 <br />
-                <input autoComplete="off" className="forms" type="password" id="#password" />
+                <input
+                  autoComplete="off"
+                  className="forms"
+                  type="password"
+                  id="#password"
+                />
               </FormGroup>
               <button className="btn-modal">Sign In</button>
             </Form>
             <div className="text-center mt-3">
-              <small>Don't have account? </small><small className="bold">Click Here</small>
+              <small>Don't have account? </small>
+              <Link to="/register" onClick={this.toggle}>
+                <small className="bold">Click Here</small>
+              </Link>
             </div>
           </div>
         </Modal>

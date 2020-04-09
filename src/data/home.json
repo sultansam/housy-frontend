@@ -1,164 +1,227 @@
 [
-    {
-        "id": 1,
-        "property": "Astina",
-        "image": [
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
-            "https://www.pegipegi.com/travel/wp-content/uploads/2018/01/hotel-kuala-lumpur.jpg",
-            "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg"
-        ],
-        "city": "Tangerang Timur Laut",
-        "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
-        "description": "",
-        "price": 150000,
-        "typeofrent": "Day",
-        "amenities": "Furnished",
-        "bedroom": 3,
-        "bathroom": 2,
-        "area": 1800
-    },
-    {
-        "id": 2,
-        "property": "Astena",
-        "image": [
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
-            "https://www.pegipegi.com/travel/wp-content/uploads/2018/01/hotel-kuala-lumpur.jpg",
-            "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg"
-        ],
-        "city": "Tangerang Barat Daya",
-        "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
-        "description": "",
-        "price": 300000,
-        "typeofrent": "Day",
-        "amenities": "Furnished",
-        "bedroom": 3,
-        "bathroom": 2,
-        "area": 1800
-    },
-    {
-        "id": 3,
-        "property": "Astona",
-        "image": [
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
-            "https://www.pegipegi.com/travel/wp-content/uploads/2018/01/hotel-kuala-lumpur.jpg",
-            "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg"
-        ],
-        "city": "Tangerang Tengah",
-        "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
-        "description": "",
-        "price": 250000,
-        "typeofrent": "Day",
-        "amenities": "Furnished",
-        "bedroom": 3,
-        "bathroom": 2,
-        "area": 1800
-    },
-    {
-        "id": 4,
-        "property": "Astuna",
-        "image": [
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
-            "https://www.pegipegi.com/travel/wp-content/uploads/2018/01/hotel-kuala-lumpur.jpg",
-            "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg"
-        ],
-        "city": "Tangerang Pinggir",
-        "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
-        "description": "",
-        "price": 175000,
-        "typeofrent": "Day",
-        "amenities": "Furnished",
-        "bedroom": 3,
-        "bathroom": 2,
-        "area": 1800
-    },
-    {
-        "id": 5,
-        "property": "Astina",
-        "image": [
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
-            "https://www.pegipegi.com/travel/wp-content/uploads/2018/01/hotel-kuala-lumpur.jpg",
-            "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg"
-        ],
-        "city": "Tangerang Selatan",
-        "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
-        "description": "",
-        "price": 150000,
-        "typeofrent": "Day",
-        "amenities": "Furnished",
-        "bedroom": 3,
-        "bathroom": 2,
-        "area": 1800
-    },
-    {
-        "id": 6,
-        "property": "Astina",
-        "image": [
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
-            "https://www.pegipegi.com/travel/wp-content/uploads/2018/01/hotel-kuala-lumpur.jpg",
-            "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg"
-        ],
-        "city": "Tangerang Selatan",
-        "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
-        "description": "",
-        "price": 150000,
-        "typeofrent": "Day",
-        "amenities": "Furnished",
-        "bedroom": 3,
-        "bathroom": 2,
-        "area": 1800
-    },
-    {
-        "id": 7,
-        "property": "Astina",
-        "image": [
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
-            "https://www.pegipegi.com/travel/wp-content/uploads/2018/01/hotel-kuala-lumpur.jpg",
-            "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg"
-        ],
-        "city": "Tangerang Selatan",
-        "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
-        "description": "",
-        "price": 150000,
-        "typeofrent": "Day",
-        "amenities": "Furnished",
-        "bedroom": 3,
-        "bathroom": 2,
-        "area": 1800
-    },
-    {
-        "id": 8,
-        "property": "Astina",
-        "image": [
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
-            "https://www.pegipegi.com/travel/wp-content/uploads/2018/01/hotel-kuala-lumpur.jpg",
-            "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg"
-        ],
-        "city": "Tangerang Selatan",
-        "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
-        "description": "",
-        "price": 150000,
-        "typeofrent": "Day",
-        "amenities": "Furnished",
-        "bedroom": 3,
-        "bathroom": 2,
-        "area": 1800
-    },
-    {
-        "id": 9,
-        "property": "Astina",
-        "image": [
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
-            "https://www.pegipegi.com/travel/wp-content/uploads/2018/01/hotel-kuala-lumpur.jpg",
-            "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg"
-        ],
-        "city": "Tangerang Selatan",
-        "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
-        "description": "",
-        "price": 150000,
-        "typeofrent": "Day",
-        "amenities": "Furnished",
-        "bedroom": 3,
-        "bathroom": 2,
-        "area": 1800
-    }
+  {
+    "id": 1,
+    "property": "Astina",
+    "image": [
+      {
+        "key": 1,
+        "src": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
+        "variant_ids": []
+      },
+      {
+        "key": 2,
+        "src": "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg",
+        "variant_ids": []
+      }
+    ],
+    "city": "Tangerang Timur Laut",
+    "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "price": 150000,
+    "typeofrent": "Day",
+    "amenities": "Furnished",
+    "bedroom": 3,
+    "bathroom": 2,
+    "area": 1800
+  },
+  {
+    "id": 2,
+    "property": "Astena",
+    "image": [
+      {
+        "key": 1,
+        "src": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
+        "variant_ids": []
+      },
+      {
+        "key": 2,
+        "src": "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg",
+        "variant_ids": []
+      }
+    ],
+    "city": "Tangerang Barat Daya",
+    "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
+    "description": "",
+    "price": 300000,
+    "typeofrent": "Day",
+    "amenities": "Furnished",
+    "bedroom": 3,
+    "bathroom": 2,
+    "area": 1800
+  },
+  {
+    "id": 3,
+    "property": "Astona",
+    "image": [
+      {
+        "key": 1,
+        "src": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
+        "variant_ids": []
+      },
+      {
+        "key": 2,
+        "src": "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg",
+        "variant_ids": []
+      }
+    ],
+    "city": "Tangerang Tengah",
+    "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
+    "description": "",
+    "price": 250000,
+    "typeofrent": "Day",
+    "amenities": "Furnished",
+    "bedroom": 3,
+    "bathroom": 2,
+    "area": 1800
+  },
+  {
+    "id": 4,
+    "property": "Astuna",
+    "image": [
+      {
+        "key": 1,
+        "src": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
+        "variant_ids": []
+      },
+      {
+        "key": 2,
+        "src": "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg",
+        "variant_ids": []
+      }
+    ],
+    "city": "Tangerang Pinggir",
+    "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
+    "description": "",
+    "price": 175000,
+    "typeofrent": "Day",
+    "amenities": "Furnished",
+    "bedroom": 3,
+    "bathroom": 2,
+    "area": 1800
+  },
+  {
+    "id": 5,
+    "property": "Astina",
+    "image": [
+      {
+        "key": 1,
+        "src": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
+        "variant_ids": []
+      },
+      {
+        "key": 2,
+        "src": "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg",
+        "variant_ids": []
+      }
+    ],
+    "city": "Tangerang Selatan",
+    "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
+    "description": "",
+    "price": 150000,
+    "typeofrent": "Day",
+    "amenities": "Furnished",
+    "bedroom": 3,
+    "bathroom": 2,
+    "area": 1800
+  },
+  {
+    "id": 6,
+    "property": "Astina",
+    "image": [
+      {
+        "key": 1,
+        "src": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
+        "variant_ids": []
+      },
+      {
+        "key": 2,
+        "src": "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg",
+        "variant_ids": []
+      }
+    ],
+    "city": "Tangerang Selatan",
+    "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
+    "description": "",
+    "price": 150000,
+    "typeofrent": "Day",
+    "amenities": "Furnished",
+    "bedroom": 3,
+    "bathroom": 2,
+    "area": 1800
+  },
+  {
+    "id": 7,
+    "property": "Astina",
+    "image": [
+      {
+        "key": 1,
+        "src": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
+        "variant_ids": []
+      },
+      {
+        "key": 2,
+        "src": "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg",
+        "variant_ids": []
+      }
+    ],
+    "city": "Tangerang Selatan",
+    "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
+    "description": "",
+    "price": 150000,
+    "typeofrent": "Day",
+    "amenities": "Furnished",
+    "bedroom": 3,
+    "bathroom": 2,
+    "area": 1800
+  },
+  {
+    "id": 8,
+    "property": "Astina",
+    "image": [
+      {
+        "key": 1,
+        "src": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
+        "variant_ids": []
+      },
+      {
+        "key": 2,
+        "src": "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg",
+        "variant_ids": []
+      }
+    ],
+    "city": "Tangerang Selatan",
+    "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
+    "description": "",
+    "price": 150000,
+    "typeofrent": "Day",
+    "amenities": "Furnished",
+    "bedroom": 3,
+    "bathroom": 2,
+    "area": 1800
+  },
+  {
+    "id": 9,
+    "property": "Astina",
+    "image": [
+      {
+        "key": 1,
+        "src": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20007376-b047680ca88979d68c3c6cf2c5fb9aeb.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit",
+        "variant_ids": []
+      },
+      {
+        "key": 2,
+        "src": "https://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/hotels/budget-hotels/pagePropertiesImage/kl-budget-hotels.jpg",
+        "variant_ids": []
+      }
+    ],
+    "city": "Tangerang Selatan",
+    "address": "Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren, Tangerang Selatan",
+    "description": "",
+    "price": 150000,
+    "typeofrent": "Day",
+    "amenities": "Furnished",
+    "bedroom": 3,
+    "bathroom": 2,
+    "area": 1800
+  }
 ]

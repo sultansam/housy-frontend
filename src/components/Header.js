@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp"
+import SignIn from "./SignInModals";
+import SignUp from "./SignUpModals"
 import icon from "../icon.svg";
 
 export default class Header extends Component {
