@@ -26,25 +26,25 @@ export default class SignIn extends Component {
             <h3 className="pt-3">Sign In</h3>
           </div>
 
-          <div className="px-4 pt-0 pb-5">
+          <div className="px-4 pt-0 pb-4">
             <Form>
               <FormGroup>
                 <label className="bold" htmlFor="#username">
                   Username
                 </label>
                 <br />
-                <input className="forms" id="#username" />
+                <input autoComplete="off" className="forms" id="#username" />
               </FormGroup>
               <FormGroup>
                 <label className="bold" htmlFor="#password">
                   Password
                 </label>
                 <br />
-                <input className="forms" type="password" id="#password" />
+                <input autoComplete="off" className="forms" type="password" id="#password" />
               </FormGroup>
               <button className="btn-modal">Sign In</button>
             </Form>
-            <div className="text-center mt-2">
+            <div className="text-center mt-3">
               <small>Don't have account? </small><small className="bold">Click Here</small>
             </div>
           </div>
