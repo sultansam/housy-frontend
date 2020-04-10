@@ -17,6 +17,10 @@ h6 {
   color: #212529;
 }
 
+p {
+  color: #000;
+}
+
 button:focus {
   border-color: transparent !important;
   outline: none !important;
@@ -285,12 +289,24 @@ a:hover {
   width: 100px;
 }
 
+.btn-profile {
+  width: 100%;
+  height: 40px;
+  left: 285px;
+  top: 984px;
+  color: white;
+  font-weight: bold;
+  border: 1px solid transparent;
+  background: #5a57ab;
+  border-radius: 5px;
+}
+
 .user {
   width: 50px;
   height: 50px;
   background: transparent !important;
   border: none !important;
-  background: url(https://img.icons8.com/plasticine/2x/user.png)
+  background: url(https://img.icons8.com/plasticine/2x/user.png);
 }
 
 .dropdown-menu {
@@ -340,4 +356,21 @@ a:hover {
   border-right: none;
   border-bottom: 0;
   border-left: none;
+}
+
+.profile-img {
+  height: 345px;
+
+  background: url(https://img.inews.id/media/822/files/inews/5-LIFESTYLE/HEALTH/zan_malik1.jpg) center top no-repeat;
+  background-blend-mode: normal;
+}
+
+.btn-pass {
+  cursor: pointer;
+  color: #0083E2;
+  background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
 }
