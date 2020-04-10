@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import bed from "../images/bed.svg";
+import bathroom from "../images/bathroom.svg";
 
 import data from "../data/home.json";
 
@@ -16,8 +19,8 @@ export default class Detail extends Component {
     const {
       match: { params }
     } = this.props;
-    console.log(params.id)
-    const produk = data[params.id-1];
+    console.log(params.id);
+    const produk = data[params.id - 1];
     this.setState({ data: produk, load: true });
   }
 
@@ -35,7 +38,7 @@ export default class Detail extends Component {
     const data = this.state.data;
     const load = this.state.load;
 
-    console.log(data)
+    console.log(data);
 
     return (
       <div>
@@ -65,14 +68,46 @@ export default class Detail extends Component {
               <Col>
                 <div>
                   <h3>Housy {data.property}</h3>
-                  <h5 className="bold">
-                    Rp {data.price} / {data.typeofrent}
-                  </h5>
-                  <p className="small text-muted">{data.address}</p>
+
+                  <div className="d-flex justify-content-between align-items-top">
+                    <div className="mr-0">
+                      <h5 className="bold">
+                        Rp {data.price} / {data.typeofrent}
+                      </h5>
+                      <div>
+                        <p className="small text-muted mb-3">{data.address}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="d-flex mb-3"
+                  >
+                    <div className="mr-3">
+                      <p className="small bold mb-1">Bedrooms</p>
+                      <h5>
+                        {data.bedroom} <img className="icons" src={bed} alt=".." />
+                      </h5>
+                    </div>
+                    <div className="mr-3">
+                      <p className="small bold mb-1">Bathrooms</p>
+                      <h5>
+                        {data.bathroom} <img className="icons" src={bathroom} alt=".." />
+                      </h5>
+                    </div>
+                    <div>
+                      <p className="small bold mb-1">Area</p>
+                      <h5>{data.area} ft</h5>
+                    </div>
+                  </div>
 
                   <div>
                     <h5>Description</h5>
                     <p>{data.description}</p>
+                  </div>
+
+                  <div className="float-right">
+                    <button className="btn-apply">Book Now</button>
                   </div>
                 </div>
               </Col>

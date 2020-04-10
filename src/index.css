@@ -268,3 +268,8 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+.icons {
+  width: 15px;
+  height: 15px;
+}

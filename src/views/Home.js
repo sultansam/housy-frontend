@@ -31,7 +31,7 @@ export default class Home extends Component {
       <>
         <Row className="pt-3 px-0">
           <Col lg={4} md={7} sm={12} className="mb-3 px-2">
-            <Card className="p-4">
+            <div className="card p-4">
               <div className="section mb-4">
                 <h5>Type of Rent</h5>
 
@@ -157,10 +157,10 @@ export default class Home extends Component {
                   <input className="form-box" placeholder="0" />
                 </div>
               </div>
-              <div className="pull-right">
+              <div className="float-right">
                 <button className="btn-apply">APPLY</button>
               </div>
-            </Card>
+            </div>
           </Col>
 
           <Col>
