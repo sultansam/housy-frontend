@@ -41,8 +41,8 @@ export default class Detail extends Component {
       <div>
         {load ? (
           <div>
-            <Row className="px-0">
-              <Col lg={6}>
+            <Row className="px-0 pt-3">
+              <Col lg={6} className="mb-5">
                 <div>
                   <Slider {...settings} className="slide-border">
                     {data.image.length > 0
@@ -64,10 +64,10 @@ export default class Detail extends Component {
               </Col>
               <Col>
                 <div>
-                  <h3>{data.property}</h3>
-                  <h4 className="bold">
+                  <h3>Housy {data.property}</h3>
+                  <h5 className="bold">
                     Rp {data.price} / {data.typeofrent}
-                  </h4>
+                  </h5>
                   <p className="small text-muted">{data.address}</p>
 
                   <div>
