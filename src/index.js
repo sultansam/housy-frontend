@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Home from "./views/Home";
+import Profile from "./views/Profile";
 import SignUp from "./views/SignUp";
 import Detail from "./views/Detail";
 
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={SignUp} />
         <Route exact path="/detail/:id" component={Detail} />
+        <Route exact path="/profile" component={Profile} />
       </Switch>
     </div>
   </BrowserRouter>,

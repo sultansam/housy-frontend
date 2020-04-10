@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 import Slider from "react-slick";
+import Booking from "../components/BookingModal";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -107,7 +109,7 @@ export default class Detail extends Component {
                   </div>
 
                   <div className="float-right">
-                    <button className="btn-apply">Book Now</button>
+                    <Booking />
                   </div>
                 </div>
               </Col>
