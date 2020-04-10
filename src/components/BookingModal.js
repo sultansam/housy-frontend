@@ -41,7 +41,7 @@ export default class Booking extends Component {
                 <br />
                 <select className="forms" id="#checkout"></select>
               </FormGroup>
-              <button className="btn-modal">Sign In</button>
+              <button className="btn-modal">Order</button>
             </Form>
           </div>
         </Modal>
