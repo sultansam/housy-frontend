@@ -19,7 +19,10 @@ export default class SignIn extends Component {
     const { open } = this.state;
     return (
       <div>
-        <button onClick={this.toggle} className="btn-sign btn mr-3 font-weight-bold">
+        <button
+          onClick={this.toggle}
+          className="btn-sign btn mr-3 font-weight-bold"
+        >
           Sign In
         </button>
         <Modal show={open} onHide={this.toggle} centered>
@@ -34,7 +37,12 @@ export default class SignIn extends Component {
                   Username
                 </label>
                 <br />
-                <input autoComplete="off" className="forms" id="#username" />
+                <input
+                  required
+                  autoComplete="off"
+                  className="forms"
+                  id="#username"
+                />
               </FormGroup>
               <FormGroup>
                 <label className="bold" htmlFor="#password">
@@ -42,6 +50,7 @@ export default class SignIn extends Component {
                 </label>
                 <br />
                 <input
+                  required
                   autoComplete="off"
                   className="forms"
                   type="password"

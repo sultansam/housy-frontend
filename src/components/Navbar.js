@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import { Navbar, Form } from "react-bootstrap";
 import SignIn from "./SignInModals";
 import SignUp from "./SignUpModals";
+import Dropdown from "./DropdownUser";
 import icon from "../images/icon.svg";
 
 export default class Header extends Component {
+  state = {
+    signin: true
+  };
+
   render() {
+    const signin = this.state.signin;
+
     return (
       <Navbar bg="white" expand="lg" className="px-0">
         <Link to="/">
@@ -21,8 +28,15 @@ export default class Header extends Component {
               placeholder="Search Location"
             />
           </Form>
-          <SignIn />
-          <SignUp />
+
+          {signin ? (
+            <Dropdown />
+          ) : (
+            <div className="d-flex mt-3">
+              <SignIn />
+              <SignUp />
+            </div>
+          )}
         </Navbar.Collapse>
       </Navbar>
     );

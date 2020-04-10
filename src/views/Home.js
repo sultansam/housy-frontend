@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import {
   Row,
   Col,
+  Form,
   ToggleButtonGroup,
   ToggleButton
 } from "react-bootstrap";
@@ -31,134 +32,158 @@ export default class Home extends Component {
         <Row className="pt-3 px-0">
           <Col lg={4} md={7} sm={12} className="mb-3 px-2">
             <div className="p-2">
-              <div className="section mb-4">
-                <h5>Type of Rent</h5>
+              <Form>
+                <div className="section mb-4">
+                  <h5>Type of Rent</h5>
 
-                <ToggleButtonGroup
-                  type="radio"
-                  name="options"
-                  onChange={this.onChange}
-                >
-                  <ToggleButton className="btn-rent mr-btn" value={"a"}>
-                    Day
-                  </ToggleButton>
-                  <ToggleButton className="btn-rent mr-btn" value={"b"}>
-                    Month
-                  </ToggleButton>
-                  <ToggleButton className="btn-rent" value={"c"}>
-                    Year
-                  </ToggleButton>
-                </ToggleButtonGroup>
-              </div>
-
-              <div className="section mb-4">
-                <h5>Date</h5>
-                <DatePicker
-                  className="date-box"
-                  selected={this.state.startDate}
-                  onChange={this.handleChange}
-                />
-              </div>
-
-              <div className="section mb-4">
-                <h5>Property Room</h5>
-                <div className="mb-2">
-                  <p className="small bold text-muted mb-0">Bedroom</p>
                   <ToggleButtonGroup
                     type="radio"
                     name="options"
                     onChange={this.onChange}
                   >
-                    <ToggleButton className="btn-prop mr-btn-prop" value={"1"}>
-                      1
+                    <ToggleButton className="btn-rent mr-btn" value={"a"}>
+                      Day
                     </ToggleButton>
-                    <ToggleButton className="btn-prop mr-btn-prop" value={"2"}>
-                      2
+                    <ToggleButton className="btn-rent mr-btn" value={"b"}>
+                      Month
                     </ToggleButton>
-                    <ToggleButton className="btn-prop mr-btn-prop" value={"3"}>
-                      3
-                    </ToggleButton>
-                    <ToggleButton className="btn-prop mr-btn-prop" value={"4"}>
-                      4
-                    </ToggleButton>
-                    <ToggleButton className="btn-prop" value={"5"}>
-                      5+
+                    <ToggleButton className="btn-rent" value={"c"}>
+                      Year
                     </ToggleButton>
                   </ToggleButtonGroup>
                 </div>
 
-                <div>
-                  <p className="small bold text-muted mb-0">Bathroom</p>
-                  <ToggleButtonGroup
-                    type="radio"
-                    name="options"
-                    onChange={this.onChange}
-                  >
-                    <ToggleButton className="btn-prop mr-btn-prop" value={"1"}>
-                      1
-                    </ToggleButton>
-                    <ToggleButton className="btn-prop mr-btn-prop" value={"2"}>
-                      2
-                    </ToggleButton>
-                    <ToggleButton className="btn-prop mr-btn-prop" value={"3"}>
-                      3
-                    </ToggleButton>
-                    <ToggleButton className="btn-prop mr-btn-prop" value={"4"}>
-                      4
-                    </ToggleButton>
-                    <ToggleButton className="btn-prop" value={"5"}>
-                      5+
-                    </ToggleButton>
-                  </ToggleButtonGroup>
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <h5>Amenities</h5>
-                <div className="d-flex justify-content-between mb-0">
-                  <p className="bold text-muted mb-0">Furnished</p>
-                  <label>
-                    <input
-                      className="checkbox"
-                      type="checkbox"
-                      value="check1"
-                    />
-                  </label>
+                <div className="section mb-4">
+                  <h5>Date</h5>
+                  <DatePicker
+                    className="date-box"
+                    selected={this.state.startDate}
+                    onChange={this.handleChange}
+                  />
                 </div>
 
-                <div className="d-flex justify-content-between mb-0">
-                  <p className="bold text-muted mb-0">Pet Allowed</p>
-                  <label>
-                    <input
-                      className="checkbox"
-                      type="checkbox"
-                      value="check1"
-                    />
-                  </label>
+                <div className="section mb-4">
+                  <h5>Property Room</h5>
+                  <div className="mb-2">
+                    <p className="small bold text-muted mb-0">Bedroom</p>
+                    <ToggleButtonGroup
+                      type="radio"
+                      name="options"
+                      onChange={this.onChange}
+                    >
+                      <ToggleButton
+                        className="btn-prop mr-btn-prop"
+                        value={"1"}
+                      >
+                        1
+                      </ToggleButton>
+                      <ToggleButton
+                        className="btn-prop mr-btn-prop"
+                        value={"2"}
+                      >
+                        2
+                      </ToggleButton>
+                      <ToggleButton
+                        className="btn-prop mr-btn-prop"
+                        value={"3"}
+                      >
+                        3
+                      </ToggleButton>
+                      <ToggleButton
+                        className="btn-prop mr-btn-prop"
+                        value={"4"}
+                      >
+                        4
+                      </ToggleButton>
+                      <ToggleButton className="btn-prop" value={"5"}>
+                        5+
+                      </ToggleButton>
+                    </ToggleButtonGroup>
+                  </div>
+
+                  <div>
+                    <p className="small bold text-muted mb-0">Bathroom</p>
+                    <ToggleButtonGroup
+                      type="radio"
+                      name="options"
+                      onChange={this.onChange}
+                    >
+                      <ToggleButton
+                        className="btn-prop mr-btn-prop"
+                        value={"1"}
+                      >
+                        1
+                      </ToggleButton>
+                      <ToggleButton
+                        className="btn-prop mr-btn-prop"
+                        value={"2"}
+                      >
+                        2
+                      </ToggleButton>
+                      <ToggleButton
+                        className="btn-prop mr-btn-prop"
+                        value={"3"}
+                      >
+                        3
+                      </ToggleButton>
+                      <ToggleButton
+                        className="btn-prop mr-btn-prop"
+                        value={"4"}
+                      >
+                        4
+                      </ToggleButton>
+                      <ToggleButton className="btn-prop" value={"5"}>
+                        5+
+                      </ToggleButton>
+                    </ToggleButtonGroup>
+                  </div>
                 </div>
 
-                <div className="d-flex justify-content-between">
-                  <p className="bold text-muted mb-0">Shared Accomodation</p>
-                  <label>
-                    <input
-                      className="checkbox"
-                      type="checkbox"
-                      value="check1"
-                    />
-                  </label>
-                </div>
-              </div>
+                <div className="mb-4">
+                  <h5>Amenities</h5>
+                  <div className="d-flex justify-content-between mb-0">
+                    <p className="bold text-muted mb-0">Furnished</p>
+                    <label>
+                      <input
+                        className="checkbox"
+                        type="checkbox"
+                        value="check1"
+                      />
+                    </label>
+                  </div>
 
-              <div className="mb-4">
-                <h5>Budget</h5>
-                <div className="d-flex align-items-center justify-content-between">
-                  <small className="bold mr-3">Less than IDR</small>
-                  <input className="form-box" placeholder="0" />
+                  <div className="d-flex justify-content-between mb-0">
+                    <p className="bold text-muted mb-0">Pet Allowed</p>
+                    <label>
+                      <input
+                        className="checkbox"
+                        type="checkbox"
+                        value="check1"
+                      />
+                    </label>
+                  </div>
+
+                  <div className="d-flex justify-content-between">
+                    <p className="bold text-muted mb-0">Shared Accomodation</p>
+                    <label>
+                      <input
+                        className="checkbox"
+                        type="checkbox"
+                        value="check1"
+                      />
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div className="float-right">
-                <button className="btn-apply">APPLY</button>
-              </div>
+
+                <div className="mb-4">
+                  <h5>Budget</h5>
+                  <div className="d-flex align-items-center justify-content-between">
+                    <small className="bold mr-3">Less than IDR</small>
+                    <input className="form-box" placeholder="0" />
+                  </div>
+                </div>
+                <button className="btn-apply float-right">APPLY</button>
+              </Form>
             </div>
           </Col>
 
@@ -168,10 +193,10 @@ export default class Home extends Component {
                 <Col lg={4} className="mb-3 px-2" key={housy.id}>
                   <Link to={`/detail/${housy.id}`}>
                     <div className="card">
-                      <div className="card-body p-3">
+                      <div className="card-body p-2">
                         <div className="category p-2">{housy.amenities}</div>
                         <img
-                          style={{ maxHeight: "150px" }}
+                          style={{ maxHeight: "160px" }}
                           className="card-img mb-2"
                           src={housy.image[0].src}
                           alt=""

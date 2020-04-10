@@ -36,28 +36,28 @@ export default class SignUp extends Component {
                   Full Name
                 </label>
                 <br />
-                <input className="forms" id="#fullname" />
+                <input required className="forms" id="#fullname" />
               </FormGroup>
               <FormGroup>
                 <label className="bold" htmlFor="#username">
                   Username
                 </label>
                 <br />
-                <input className="forms" id="#username" />
+                <input required className="forms" id="#username" />
               </FormGroup>
               <FormGroup>
                 <label className="bold" htmlFor="#email">
                   Email
                 </label>
                 <br />
-                <input type="email" className="forms" id="#email" />
+                <input required type="email" className="forms" id="#email" />
               </FormGroup>
               <FormGroup>
                 <label className="bold" htmlFor="#password">
                   Password
                 </label>
                 <br />
-                <input className="forms" type="password" id="#password" />
+                <input required className="forms" type="password" id="#password" />
               </FormGroup>
               <FormGroup>
                 <label className="bold" htmlFor="#list">
@@ -84,7 +84,7 @@ export default class SignUp extends Component {
                   Phone
                 </label>
                 <br />
-                <input className="forms" id="#phone" type="number" />
+                <input required className="forms" id="#phone" type="number" />
               </FormGroup>
               <FormGroup>
                 <label className="bold" htmlFor="#address">

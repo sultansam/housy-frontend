@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import SignUp from "./views/SignUp";
 import Detail from "./views/Detail";
@@ -16,7 +16,7 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <BrowserRouter>
     <div className="container pb-5">
-      <Header />
+      <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={SignUp} />
