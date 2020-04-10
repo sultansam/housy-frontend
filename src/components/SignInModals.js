@@ -19,7 +19,7 @@ export default class SignIn extends Component {
     const { open } = this.state;
     return (
       <div>
-        <button onClick={this.toggle} className="btn mr-3 font-weight-bold">
+        <button onClick={this.toggle} className="btn-sign btn mr-3 font-weight-bold">
           Sign In
         </button>
         <Modal show={open} onHide={this.toggle} centered>

@@ -20,7 +20,7 @@ export default class SignUp extends Component {
       <div>
         <button
           onClick={this.toggle}
-          className="btn btn-light font-weight-bold"
+          className="btn-sign btn btn-light font-weight-bold"
         >
           Sign Up
         </button>

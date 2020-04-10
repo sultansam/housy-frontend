@@ -16,7 +16,7 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <BrowserRouter>
     <div className="container pb-5">
-      
+      <Header />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={SignUp} />

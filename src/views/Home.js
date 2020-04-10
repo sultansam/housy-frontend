@@ -4,7 +4,6 @@ import DatePicker from "react-datepicker";
 import {
   Row,
   Col,
-  Card,
   ToggleButtonGroup,
   ToggleButton
 } from "react-bootstrap";
@@ -31,7 +30,7 @@ export default class Home extends Component {
       <>
         <Row className="pt-3 px-0">
           <Col lg={4} md={7} sm={12} className="mb-3 px-2">
-            <div className="card p-4">
+            <div className="p-2">
               <div className="section mb-4">
                 <h5>Type of Rent</h5>
 

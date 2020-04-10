@@ -67,7 +67,7 @@ export default class Detail extends Component {
               </Col>
               <Col>
                 <div>
-                  <h3>Housy {data.property}</h3>
+                  <h3>House {data.property}</h3>
 
                   <div className="d-flex justify-content-between align-items-top">
                     <div className="mr-0">
