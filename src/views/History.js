@@ -70,10 +70,10 @@ export default class History extends Component {
               <Col>
                 <div className="p-3">
                   <div className="text-center">
-                    <div className="booking-img pt-2">
-                      <QRCode value="TYE938" />
+                    <div>
+                      <QRCode size="256" style={{height: '200px', width: '200px'}} value="TYE938" />
                     </div>
-                    <h4>TYE938</h4>
+                    <h4 className="mt-3">TYE938</h4>
                   </div>
                 </div>
               </Col>
