@@ -19,7 +19,7 @@ export default class User extends Component {
             />
           </Dropdown.Toggle>
 
-          <Dropdown.Menu>
+          <Dropdown.Menu className="dropdown-menu-right">
             <Link to="/profile" className="dropdown-item">
               <img className="dropdown-icon" src={profile} alt=".." />
               Profile
