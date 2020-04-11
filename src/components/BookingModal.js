@@ -1,12 +1,25 @@
 import React, { Component } from "react";
 import { Modal, Form, FormGroup } from "react-bootstrap";
+import DatePicker from "react-datepicker";
 
 export default class Booking extends Component {
   constructor(props) {
     super(props);
-    this.state = { open: false };
+    this.state = { open: false, startDate: new Date(), endDate: new Date() };
     this.toggle = this.toggle.bind(this);
   }
+
+  handleStart = date => {
+    this.setState({
+      startDate: date
+    });
+  };
+
+  handleEnd = date => {
+    this.setState({
+      endDate: date
+    });
+  };
 
   toggle() {
     this.setState({
@@ -32,16 +45,24 @@ export default class Booking extends Component {
                   Check-in
                 </label>
                 <br />
-                <select className="forms" id="#checkin"></select>
+                <DatePicker
+                  className="date-box"
+                  selected={this.state.startDate}
+                  onChange={this.handleStart}
+                />
               </FormGroup>
               <FormGroup>
                 <label className="bold" htmlFor="#checkout">
                   Check-out
                 </label>
                 <br />
-                <select className="forms" id="#checkout"></select>
+                <DatePicker
+                  className="date-box"
+                  selected={this.state.endDate}
+                  onChange={this.handleEnd}
+                />
               </FormGroup>
-              <button className="btn-modal">Order</button>
+              <button onClick={this.handleOrder} className="btn-modal">Order</button>
             </Form>
           </div>
         </Modal>

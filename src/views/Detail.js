@@ -18,6 +18,7 @@ export default class Detail extends Component {
   };
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     const {
       match: { params }
     } = this.props;

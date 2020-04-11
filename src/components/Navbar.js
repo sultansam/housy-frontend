@@ -30,7 +30,7 @@ export default class Header extends Component {
             <input
               className="form-box"
               style={{ maxWidth: "400px" }}
-              placeholder="Search Location"
+              placeholder="Search"
             />
           </Form>
 

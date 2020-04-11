@@ -11,6 +11,7 @@ import SignUp from "./views/SignUp";
 import Detail from "./views/Detail";
 
 import Admin from "./admin/Home";
+import Add from "./admin/AddProperty";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
@@ -32,6 +33,7 @@ ReactDOM.render(
 
         {/** admin page */}
         <Route exact path="/admin/home" component={Admin} />
+        <Route exact path="/admin/add" component={Add} />
       </Switch>
     </div>
   </BrowserRouter>,
