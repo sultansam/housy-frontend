@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Modal, Form, FormGroup } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 
@@ -62,7 +63,11 @@ export default class Booking extends Component {
                   onChange={this.handleEnd}
                 />
               </FormGroup>
-              <button onClick={this.handleOrder} className="btn-modal">Order</button>
+              <Link to="/booking">
+                <button className="btn-modal">
+                  Order
+                </button>
+              </Link>
             </Form>
           </div>
         </Modal>
