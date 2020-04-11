@@ -7,6 +7,13 @@ import logout from "../images/logout.svg";
 import profile from "../images/profile.svg";
 
 export default class User extends Component {
+
+  /** handle sign out */
+  handleSignOut = () => {
+    localStorage.clear();
+    window.location.reload(false);
+  }
+
   render() {
     return (
       <div>
@@ -33,10 +40,10 @@ export default class User extends Component {
               History
             </Link>
             <div className="divider"></div>
-            <Link to="/logout" className="dropdown-item">
+            <div onClick={this.handleSignOut} className="dropdown-item">
               <img className="dropdown-icon" src={logout} alt=".." />
               Logout
-            </Link>
+            </div>
           </Dropdown.Menu>
         </Dropdown>
       </div>

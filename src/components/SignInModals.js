@@ -15,6 +15,11 @@ export default class SignIn extends Component {
     });
   }
 
+  /** login handler */
+  handleSign = () => {
+    localStorage.setItem("login", true);
+  };
+
   render() {
     const { open } = this.state;
     return (
@@ -57,7 +62,9 @@ export default class SignIn extends Component {
                   id="#password"
                 />
               </FormGroup>
-              <button className="btn-modal">Sign In</button>
+              <button onClick={this.handleSign} className="btn-modal">
+                Sign In
+              </button>
             </Form>
             <div className="text-center mt-3">
               <small>Don't have account? </small>

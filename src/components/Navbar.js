@@ -8,8 +8,13 @@ import icon from "../images/icon.svg";
 
 export default class Header extends Component {
   state = {
-    signin: true
+    signin: false
   };
+
+  componentDidMount() {
+    const status = localStorage.getItem("login");
+    this.setState({ signin: status });
+  }
 
   render() {
     const signin = this.state.signin;

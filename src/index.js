@@ -30,6 +30,7 @@ ReactDOM.render(
         <Route exact path="/booking" component={Booking} />
         <Route exact path="/history" component={History} />
 
+        {/** admin page */}
         <Route exact path="/admin/home" component={Admin} />
       </Switch>
     </div>
