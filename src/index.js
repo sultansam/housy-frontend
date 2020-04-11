@@ -10,6 +10,8 @@ import History from "./views/History";
 import SignUp from "./views/SignUp";
 import Detail from "./views/Detail";
 
+import Admin from "./admin/Home";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import "./index.css";
@@ -27,6 +29,8 @@ ReactDOM.render(
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/booking" component={Booking} />
         <Route exact path="/history" component={History} />
+
+        <Route exact path="/admin/home" component={Admin} />
       </Switch>
     </div>
   </BrowserRouter>,

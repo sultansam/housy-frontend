@@ -83,7 +83,7 @@ export default class History extends Component {
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Full Name</th>
+                    <th scope="col">User</th>
                     <th scope="col">Gender</th>
                     <th scope="col">Phone</th>
                     <th></th>
