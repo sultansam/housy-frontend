@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import Profile from "./views/Profile";
 import Booking from "./views/Booking";
+import History from "./views/History";
 import SignUp from "./views/SignUp";
 import Detail from "./views/Detail";
 
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Route exact path="/detail/:id" component={Detail} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/booking" component={Booking} />
+        <Route exact path="/history" component={History} />
       </Switch>
     </div>
   </BrowserRouter>,

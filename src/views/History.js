@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+
+import QRCode from "qrcode.react";
+
 import { Row, Col } from "react-bootstrap";
 import logo from "../images/icon.svg";
 
 import "../styles/booking.css";
 
-export default class Booking extends Component {
+export default class History extends Component {
   render() {
     return (
       <div className="justify-content-center row">
@@ -17,7 +20,7 @@ export default class Booking extends Component {
                 alt=".."
               />
               <div className="text-right">
-                <h3>Booking</h3>
+                <h3>INVOICE</h3>
                 <p className="text-muted mb-2">
                   <b>Saturday</b>, 30 March 2020
                 </p>
@@ -31,7 +34,7 @@ export default class Booking extends Component {
                     Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren,
                     Tangerang Selatan
                   </p>
-                  <div className="mt-3 bold badge badge-danger">Waiting Payment</div>
+                  <div className="mt-3 bold badge badge-success">Approve</div>
                 </div>
               </Col>
               <Col lg={4} md={12} sm={12}>
@@ -67,12 +70,10 @@ export default class Booking extends Component {
               <Col>
                 <div className="p-3">
                   <div className="text-center">
-                    <img
-                      className="card-img booking-img mb-2"
-                      alt=".."
-                      src="https://1.bp.blogspot.com/-hyzxX07ciWk/XPaURkosaeI/AAAAAAAABRM/AaCDgJWE8pM-f97Xp9fldguUsjcQ0aGJACLcBGAs/s640/hadits21info-invoice%25231797799.jpg"
-                    />
-                    <small>Upload Payment Proof</small>
+                    <div className="booking-img pt-2">
+                      <QRCode value="TYE938" />
+                    </div>
+                    <h4>TYE938</h4>
                   </div>
                 </div>
               </Col>
