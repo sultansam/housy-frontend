@@ -1,37 +1,19 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
-import Confirmation from "../components/ConfirmationModal";
+import { Modal, Button, Row, Col } from "react-bootstrap";
 import logo from "../images/icon.svg";
 
-//import "../styles/booking.css";
-
-export default class Booking extends Component {
-  state = {
-    open: false,
-    paid: false
-  };
-
-  componentDidMount() {
-    const paid = localStorage.getItem("paid");
-    if (paid > 0) {
-      this.setState({ paid: true });
-    }
-  }
-
-  modal = () => {
-    this.setState({ open: !this.state.show });
-  };
-
+export default class Detail extends Component {
   render() {
-    const { paid } = this.state;
     return (
-      <div className="justify-content-center row">
-        <Confirmation
-          show={this.state.open}
-          onHide={() => this.setState({ open: !this.state.open })}
-        />
-        <div className="col-lg-10 p-4">
-          <div className="card pt-3 p-2">
+      <div>
+        <Modal
+          {...this.props}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
+          <Modal.Header closeButton></Modal.Header>
+          <div className="pt-3 p-2">
             <div className="d-flex px-3 justify-content-between align-items-top">
               <img
                 style={{ width: "100px", height: "60px" }}
@@ -53,16 +35,9 @@ export default class Booking extends Component {
                     Jl. Elang IV Perum Permata Bintaro Residence, Pondok Aren,
                     Tangerang Selatan
                   </p>
-                  <div className="mt-3 bold badge badge-success">
-                    {paid < 1 ? (
-                      <span>Waiting Payment</span>
-                    ) : (
-                      <span>Waiting Approve</span>
-                    )}
-                  </div>
                 </div>
               </Col>
-              <Col lg={4} md={12} sm={12}>
+              <Col lg={5} md={12} sm={12}>
                 <div class="p-3 timeline-wrapper">
                   <ul class="StepProgress">
                     <li class="StepProgress-item is-done">
@@ -142,18 +117,25 @@ export default class Booking extends Component {
               </table>
             </div>
           </div>
-          {paid < 0 ? (
-            <div className="float-right mt-3">
-              <button
-                onClick={this.modal}
-                style={{ width: "200px" }}
-                className="btn-modal"
+          <Modal.Footer>
+            <div className="d-flex">
+              <Button
+                variant="danger"
+                className="mr-2 btn-sm bold"
+                onClick={this.props.onHide}
               >
-                PAY
-              </button>
+                Cancel
+              </Button>
+              <Button
+                variant="success"
+                className="bold"
+                onClick={this.props.onHide}
+              >
+                Approve
+              </Button>
             </div>
-          ) : null}
-        </div>
+          </Modal.Footer>
+        </Modal>
       </div>
     );
   }

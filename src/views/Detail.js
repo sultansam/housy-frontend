@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
+import Currency from "react-currency-format";
+
 import Slider from "react-slick";
 import Booking from "../components/BookingModal";
 
@@ -75,7 +77,13 @@ export default class Detail extends Component {
                   <div className="d-flex justify-content-between align-items-top">
                     <div className="mr-0">
                       <h5 className="bold">
-                        Rp {data.price} / {data.typeofrent}
+                        <Currency
+                          value={data.price}
+                          displayType={"text"}
+                          thousandSeparator={true}
+                          prefix={"Rp "}
+                        />
+                        / {data.typeofrent}
                       </h5>
                       <div>
                         <p className="small text-muted mb-3">{data.address}</p>
@@ -83,19 +91,19 @@ export default class Detail extends Component {
                     </div>
                   </div>
 
-                  <div
-                    className="d-flex mb-3"
-                  >
+                  <div className="d-flex mb-3">
                     <div className="mr-3">
                       <p className="small bold mb-1">Bedrooms</p>
                       <h5>
-                        {data.bedroom} <img className="icons" src={bed} alt=".." />
+                        {data.bedroom}{" "}
+                        <img className="icons" src={bed} alt=".." />
                       </h5>
                     </div>
                     <div className="mr-3">
                       <p className="small bold mb-1">Bathrooms</p>
                       <h5>
-                        {data.bathroom} <img className="icons" src={bathroom} alt=".." />
+                        {data.bathroom}{" "}
+                        <img className="icons" src={bathroom} alt=".." />
                       </h5>
                     </div>
                     <div>

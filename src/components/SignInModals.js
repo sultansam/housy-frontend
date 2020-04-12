@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { Modal, Form, FormGroup } from "react-bootstrap";
 
 export default class SignIn extends Component {
@@ -8,6 +8,11 @@ export default class SignIn extends Component {
     this.state = { open: false };
     this.toggle = this.toggle.bind(this);
   }
+
+  select = e => {
+    const val = e.target.value;
+    localStorage.setItem("owner", val);
+  };
 
   toggle() {
     this.setState({
@@ -20,6 +25,13 @@ export default class SignIn extends Component {
     localStorage.setItem("login", true);
   };
 
+  renderRedirect = () => {
+    const owner = localStorage.getItem("owner");
+    if (owner > 0) {
+      return <Redirect to="/admin/home" />;
+    }
+  };
+
   render() {
     const { open } = this.state;
     return (
@@ -30,7 +42,7 @@ export default class SignIn extends Component {
         >
           Sign In
         </button>
-        <Modal show={open} onHide={this.toggle} centered>
+        <Modal size="sm" show={open} onHide={this.toggle} centered>
           <div className="text-center p-3">
             <h3 className="pt-3">Sign In</h3>
           </div>
@@ -62,9 +74,20 @@ export default class SignIn extends Component {
                   id="#password"
                 />
               </FormGroup>
+              <FormGroup>
+                <label className="bold" htmlFor="#password">
+                  Log In As
+                </label>
+                <br />
+                <select onChange={this.select} required className="forms">
+                  <option value="0">Tenant</option>
+                  <option value="1">Owner</option>
+                </select>
+              </FormGroup>
               <button onClick={this.handleSign} className="btn-modal">
                 Sign In
               </button>
+              {this.renderRedirect()}
             </Form>
             <div className="text-center mt-3">
               <small>Don't have account? </small>

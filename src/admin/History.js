@@ -5,7 +5,7 @@ import QRCode from "qrcode.react";
 import { Row, Col } from "react-bootstrap";
 import logo from "../images/icon.svg";
 
-import "../styles/booking.css";
+//import "../styles/booking.css";
 
 export default class History extends Component {
   render() {

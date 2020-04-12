@@ -10,12 +10,14 @@ import icon from "../images/icon.svg";
 export default class Header extends Component {
   state = {
     signin: false,
-    owner: false
+    owner: 0
   };
 
   componentDidMount() {
     const status = localStorage.getItem("login");
-    this.setState({ signin: status });
+    const owner = localStorage.getItem("owner");
+    this.setState({ signin: status, owner: owner });
+    
   }
 
   render() {
@@ -30,11 +32,13 @@ export default class Header extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Form className="navbar-center">
-            <input
-              className="form-box"
-              style={{ maxWidth: "400px" }}
-              placeholder="Search"
-            />
+            {owner ? null : (
+              <input
+                className="form-box"
+                style={{ maxWidth: "400px" }}
+                placeholder="Search"
+              />
+            )}
           </Form>
 
           {signin ? (
@@ -45,7 +49,7 @@ export default class Header extends Component {
             )
           ) : (
             <div className="d-flex mt-3">
-              <SignIn />
+              <SignIn open={true} />
               <SignUp />
             </div>
           )}

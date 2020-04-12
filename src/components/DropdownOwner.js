@@ -7,17 +7,18 @@ import logout from "../images/logout.svg";
 import profile from "../images/profile.svg";
 
 export default class Owner extends Component {
+  
 
   /** handle sign out */
   handleSignOut = () => {
     localStorage.clear();
     window.location.reload(false);
-  }
+  };
 
   render() {
     return (
       <div>
-        <Dropdown>
+        <Dropdown onSelect={() => null}>
           <Dropdown.Toggle className="btn-white p-0 circle">
             <img
               className="user"

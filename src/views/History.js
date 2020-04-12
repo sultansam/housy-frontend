@@ -5,7 +5,7 @@ import QRCode from "qrcode.react";
 import { Row, Col } from "react-bootstrap";
 import logo from "../images/icon.svg";
 
-import "../styles/booking.css";
+//import "../styles/booking.css";
 
 export default class History extends Component {
   render() {
@@ -71,7 +71,11 @@ export default class History extends Component {
                 <div className="p-3">
                   <div className="text-center">
                     <div>
-                      <QRCode size="256" style={{height: '100px', width: '100px'}} value="TYE938" />
+                      <QRCode
+                        size="256"
+                        style={{ height: "100px", width: "100px" }}
+                        value="TYE938"
+                      />
                     </div>
                     <h4 className="mt-3">TYE938</h4>
                   </div>
@@ -95,14 +99,20 @@ export default class History extends Component {
                     <td>Radif Ganteng</td>
                     <td>Male</td>
                     <td>0853 2034 2342</td>
-                    <td>Long time rent : 1 year</td>
+                    <td>
+                      Long time rent :{" "}
+                      <b className="text-danger float-right">1 Year</b>
+                    </td>
                   </tr>
                   <tr>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>Total : Rp. 3.000.000</td>
+                    <td>
+                      Total :{" "}
+                      <b className="text-danger float-right">Rp. 3.000.000</b>
+                    </td>
                   </tr>
                 </tbody>
               </table>

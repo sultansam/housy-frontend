@@ -1,10 +1,20 @@
 import React, { Component } from "react";
 import search from "../images/search.svg";
+import Detail from "./ModalDetail";
 
 export default class Home extends Component {
+  state = {
+    open: false
+  };
+
+  toggle = () => {
+    this.setState({ open: true });
+  };
+
   render() {
     return (
       <div className="pt-3">
+        <Detail show={this.state.open} onHide={() => this.setState({open: !this.state.open})} />
         <table class="table table-sm table-striped">
           <thead>
             <tr>
@@ -24,17 +34,7 @@ export default class Home extends Component {
               <td>bca.jpg</td>
               <td>Approve</td>
               <td>
-                <img src={search} alt=".." />{" "}
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Radif Ganteng</td>
-              <td>Year</td>
-              <td>bca.jpg</td>
-              <td>Approve</td>
-              <td>
-                <img src={search} alt=".." />{" "}
+                <img onClick={this.toggle} src={search} alt=".." />
               </td>
             </tr>
           </tbody>

@@ -9,6 +9,7 @@ import {
   ToggleButton
 } from "react-bootstrap";
 import "react-datepicker/dist/react-datepicker.css";
+import Currency from "react-currency-format";
 
 import data from "../data/home.json";
 
@@ -29,12 +30,12 @@ export default class Home extends Component {
 
     return (
       <>
-        <Row className="pt-3 px-0">
+        <Row className="housy pt-3 px-0">
           <Col lg={4} md={7} sm={12} className="mb-3 px-2">
             <div className="p-2">
               <Form>
-                <div className="section mb-4">
-                  <h5>Type of Rent</h5>
+                <div className="mb-2">
+                  <p>Type of Rent</p>
 
                   <ToggleButtonGroup
                     type="radio"
@@ -53,8 +54,8 @@ export default class Home extends Component {
                   </ToggleButtonGroup>
                 </div>
 
-                <div className="section mb-4">
-                  <h5>Date</h5>
+                <div className="mb-3">
+                  <p>Date</p>
                   <DatePicker
                     className="date-box"
                     selected={this.state.startDate}
@@ -62,10 +63,10 @@ export default class Home extends Component {
                   />
                 </div>
 
-                <div className="section mb-4">
-                  <h5>Property Room</h5>
-                  <div className="mb-2">
-                    <p className="small bold text-muted mb-0">Bedroom</p>
+                <div className="mb-2">
+                  <p>Property Room</p>
+                  <div className="property mb-2">
+                    <p>Bedroom</p>
                     <ToggleButtonGroup
                       type="radio"
                       name="options"
@@ -101,8 +102,8 @@ export default class Home extends Component {
                     </ToggleButtonGroup>
                   </div>
 
-                  <div>
-                    <p className="small bold text-muted mb-0">Bathroom</p>
+                  <div className="property">
+                    <p>Bathroom</p>
                     <ToggleButtonGroup
                       type="radio"
                       name="options"
@@ -139,10 +140,10 @@ export default class Home extends Component {
                   </div>
                 </div>
 
-                <div className="mb-4">
-                  <h5>Amenities</h5>
+                <div className="amenities mb-2">
+                  <p>Amenities</p>
                   <div className="d-flex justify-content-between mb-0">
-                    <p className="bold text-muted mb-0">Furnished</p>
+                    <small className="bold text-muted mb-0">Furnished</small>
                     <label>
                       <input
                         className="checkbox"
@@ -153,7 +154,7 @@ export default class Home extends Component {
                   </div>
 
                   <div className="d-flex justify-content-between mb-0">
-                    <p className="bold text-muted mb-0">Pet Allowed</p>
+                    <small className="bold text-muted mb-0">Pet Allowed</small>
                     <label>
                       <input
                         className="checkbox"
@@ -164,7 +165,9 @@ export default class Home extends Component {
                   </div>
 
                   <div className="d-flex justify-content-between">
-                    <p className="bold text-muted mb-0">Shared Accomodation</p>
+                    <small className="bold text-muted mb-0">
+                      Shared Accomodation
+                    </small>
                     <label>
                       <input
                         className="checkbox"
@@ -175,8 +178,8 @@ export default class Home extends Component {
                   </div>
                 </div>
 
-                <div className="mb-4">
-                  <h5>Budget</h5>
+                <div className="mb-2">
+                  <p>Budget</p>
                   <div className="d-flex align-items-center justify-content-between">
                     <small className="bold mr-3">Less than IDR</small>
                     <input className="form-box" placeholder="0" />
@@ -190,19 +193,24 @@ export default class Home extends Component {
           <Col>
             <Row>
               {data.map(housy => (
-                <Col lg={4} className="mb-3 px-2" key={housy.id}>
+                <Col lg={4} className="house-list mb-3 p-2" key={housy.id}>
                   <Link to={`/detail/${housy.id}`}>
-                    <div className="card">
-                      <div className="card-body p-2">
+                    <div>
+                      <div className="detail">
                         <div className="category p-2">{housy.amenities}</div>
                         <img
                           style={{ maxHeight: "160px" }}
-                          className="card-img mb-2"
+                          className="w-100 mb-2"
                           src={housy.image[0].src}
                           alt=""
                         />
                         <p className="bold mb-0">
-                          Rp {housy.price} / {housy.typeofrent}
+                          <Currency
+                            value={housy.price}
+                            displayType={"text"}
+                            thousandSeparator={true}
+                            prefix={"Rp "}
+                          /> / {housy.typeofrent}
                         </p>
                         <small className="bold">
                           {housy.bedroom} Beds, {housy.bathroom} Baths,{" "}
