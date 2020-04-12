@@ -12,7 +12,7 @@ export default class History extends Component {
     return (
       <div className="justify-content-center row">
         <div className="col-lg-10 p-4">
-          <div className="card pt-3">
+          <div className="card pt-3 p-2">
             <div className="d-flex px-3 justify-content-between align-items-top">
               <img
                 style={{ width: "100px", height: "60px" }}
@@ -71,7 +71,7 @@ export default class History extends Component {
                 <div className="p-3">
                   <div className="text-center">
                     <div>
-                      <QRCode size="256" style={{height: '200px', width: '200px'}} value="TYE938" />
+                      <QRCode size="256" style={{height: '100px', width: '100px'}} value="TYE938" />
                     </div>
                     <h4 className="mt-3">TYE938</h4>
                   </div>
@@ -79,7 +79,7 @@ export default class History extends Component {
               </Col>
             </Row>
             <div className="px-3">
-              <table class="table">
+              <table class="table table-striped table-bordered table-sm">
                 <thead>
                   <tr>
                     <th scope="col">No</th>

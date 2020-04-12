@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
-import bill from "../images/bill.svg";
+import cabin from "../images/cabin.svg";
 import calendar from "../images/calendar.svg";
 import logout from "../images/logout.svg";
 import profile from "../images/profile.svg";
 
-export default class User extends Component {
+export default class Owner extends Component {
 
   /** handle sign out */
   handleSignOut = () => {
@@ -31,12 +31,12 @@ export default class User extends Component {
               <img className="dropdown-icon" src={profile} alt=".." />
               Profile
             </Link>
-            <Link to="/booking" className="dropdown-item">
-              <img className="dropdown-icon" src={calendar} alt=".." />
-              My Booking
+            <Link to="/admin/add" className="dropdown-item">
+              <img className="dropdown-icon" src={cabin} alt=".." />
+              Add Property
             </Link>
-            <Link to="/history" className="dropdown-item">
-              <img className="dropdown-icon" src={bill} alt=".." />
+            <Link to="/admin/history" className="dropdown-item">
+              <img className="dropdown-icon" src={calendar} alt=".." />
               History
             </Link>
             <div className="divider"></div>

@@ -1,6 +1,7 @@
 .booking-img {
   border: 2px solid #000000;
   box-sizing: border-box;
+  display: block;
 }
 
 .history-img {

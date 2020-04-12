@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { Navbar, Form } from "react-bootstrap";
 import SignIn from "./SignInModals";
 import SignUp from "./SignUpModals";
-import Dropdown from "./DropdownUser";
+import DropdownUser from "./DropdownUser";
+import DropdownOwner from "./DropdownOwner";
 import icon from "../images/icon.svg";
 
 export default class Header extends Component {
   state = {
-    signin: false
+    signin: false,
+    owner: false
   };
 
   componentDidMount() {
@@ -18,11 +20,12 @@ export default class Header extends Component {
 
   render() {
     const signin = this.state.signin;
+    const owner = this.state.owner;
 
     return (
       <Navbar bg="white" expand="lg" className="px-0">
         <Link to="/">
-          <img src={icon} alt=".." />
+          <img style={{ height: "50px" }} src={icon} alt=".." />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -35,7 +38,11 @@ export default class Header extends Component {
           </Form>
 
           {signin ? (
-            <Dropdown />
+            owner ? (
+              <DropdownOwner />
+            ) : (
+              <DropdownUser />
+            )
           ) : (
             <div className="d-flex mt-3">
               <SignIn />

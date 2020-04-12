@@ -13,10 +13,10 @@ import address from "../images/address.svg";
 export default class Profile extends Component {
   render() {
     return (
-      <Row className="pt-3 justify-content-center">
+      <Row className="pt-3 justify-content-center p-3">
         <Card className="p-4">
           <Row>
-            <Col>
+            <Col lg={6} sm={12}>
               <h4>Personal Info</h4>
 
               <div className="d-flex align-items-center my-3">

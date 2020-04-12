@@ -12,6 +12,7 @@ import Detail from "./views/Detail";
 
 import Admin from "./admin/Home";
 import Add from "./admin/AddProperty";
+import HistoryTrans from "./admin/History";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
@@ -34,6 +35,7 @@ ReactDOM.render(
         {/** admin page */}
         <Route exact path="/admin/home" component={Admin} />
         <Route exact path="/admin/add" component={Add} />
+        <Route exact path="/admin/history" component={HistoryTrans} />
       </Switch>
     </div>
   </BrowserRouter>,

@@ -5,7 +5,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="pt-3">
-        <table class="table">
+        <table class="table table-sm table-striped">
           <thead>
             <tr>
               <th scope="col">No</th>
@@ -19,6 +19,16 @@ export default class Home extends Component {
           <tbody>
             <tr>
               <th scope="row">1</th>
+              <td>Radif Ganteng</td>
+              <td>Year</td>
+              <td>bca.jpg</td>
+              <td>Approve</td>
+              <td>
+                <img src={search} alt=".." />{" "}
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
               <td>Radif Ganteng</td>
               <td>Year</td>
               <td>bca.jpg</td>

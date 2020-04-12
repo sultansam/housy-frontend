@@ -9,7 +9,7 @@ export default class Booking extends Component {
     return (
       <div className="justify-content-center row">
         <div className="col-lg-10 p-4">
-          <div className="card pt-3">
+          <div className="card pt-3 p-2">
             <div className="d-flex px-3 justify-content-between align-items-top">
               <img
                 style={{ width: "100px", height: "60px" }}
@@ -68,9 +68,10 @@ export default class Booking extends Component {
                 <div className="p-3">
                   <div className="text-center">
                     <img
-                      className="card-img booking-img mb-2"
+                      style={{width: '60%'}}
+                      className="booking-img mb-2 m-auto"
                       alt=".."
-                      src="https://1.bp.blogspot.com/-hyzxX07ciWk/XPaURkosaeI/AAAAAAAABRM/AaCDgJWE8pM-f97Xp9fldguUsjcQ0aGJACLcBGAs/s640/hadits21info-invoice%25231797799.jpg"
+                      src="https://cdn-brilio-net.akamaized.net/community/2017/12/08/4835/image_1512662902_5a29677658eb5.jpg"
                     />
                     <small>Upload Payment Proof</small>
                   </div>
@@ -78,7 +79,7 @@ export default class Booking extends Component {
               </Col>
             </Row>
             <div className="px-3">
-              <table class="table">
+              <table class="table table-striped table-bordered table-sm">
                 <thead>
                   <tr>
                     <th scope="col">No</th>
@@ -106,6 +107,9 @@ export default class Booking extends Component {
                 </tbody>
               </table>
             </div>
+          </div>
+          <div className="float-right mt-3">
+            <button style={{width: '200px'}} className="btn-modal">PAY</button>
           </div>
         </div>
       </div>
