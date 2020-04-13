@@ -38,28 +38,28 @@ export default class History extends Component {
                 </div>
               </Col>
               <Col lg={4} md={12} sm={12}>
-                <div class="p-3 timeline-wrapper">
-                  <ul class="StepProgress">
-                    <li class="StepProgress-item is-done">
+                <div className="p-3 timeline-wrapper">
+                  <ul className="StepProgress">
+                    <li className="StepProgress-item is-done">
                       <div className="d-flex">
                         <div className="mr-4">
-                          <div class="bold">Check-in</div>
+                          <div className="bold">Check-in</div>
                           <div>30 March 2020</div>
                         </div>
                         <div>
-                          <div class="bold">Amenities</div>
+                          <div className="bold">Amenities</div>
                           <div>Furnished</div>
                         </div>
                       </div>
                     </li>
-                    <li class="StepProgress-item is-done">
+                    <li className="StepProgress-item is-done">
                       <div className="d-flex">
                         <div className="mr-4">
-                          <div class="bold">Check-out</div>
+                          <div className="bold">Check-out</div>
                           <div>30 March 2020</div>
                         </div>
                         <div>
-                          <div class="bold">Type of Rent</div>
+                          <div className="bold">Type of Rent</div>
                           <div>Year</div>
                         </div>
                       </div>
@@ -83,7 +83,7 @@ export default class History extends Component {
               </Col>
             </Row>
             <div className="px-3">
-              <table class="table table-striped table-bordered table-sm">
+              <table className="table table-striped table-bordered table-sm">
                 <thead>
                   <tr>
                     <th scope="col">No</th>
@@ -99,14 +99,14 @@ export default class History extends Component {
                     <td>Radif Ganteng</td>
                     <td>Male</td>
                     <td>0853 2034 2342</td>
-                    <td>Long time rent : 1 year</td>
+                    <td>Long time rent : <b className="text-danger float-right">1 Year</b></td>
                   </tr>
                   <tr>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>Total : Rp. 3.000.000</td>
+                    <td>Total : <b className="text-danger float-right">Rp. 3.000.000</b></td>
                   </tr>
                 </tbody>
               </table>
@@ -139,28 +139,28 @@ export default class History extends Component {
                 </div>
               </Col>
               <Col lg={4} md={12} sm={12}>
-                <div class="p-3 timeline-wrapper">
-                  <ul class="StepProgress">
-                    <li class="StepProgress-item is-done">
+                <div className="p-3 timeline-wrapper">
+                  <ul className="StepProgress">
+                    <li className="StepProgress-item is-done">
                       <div className="d-flex">
                         <div className="mr-4">
-                          <div class="bold">Check-in</div>
+                          <div className="bold">Check-in</div>
                           <div>30 March 2020</div>
                         </div>
                         <div>
-                          <div class="bold">Amenities</div>
+                          <div className="bold">Amenities</div>
                           <div>Furnished</div>
                         </div>
                       </div>
                     </li>
-                    <li class="StepProgress-item is-done">
+                    <li className="StepProgress-item is-done">
                       <div className="d-flex">
                         <div className="mr-4">
-                          <div class="bold">Check-out</div>
+                          <div className="bold">Check-out</div>
                           <div>30 March 2020</div>
                         </div>
                         <div>
-                          <div class="bold">Type of Rent</div>
+                          <div className="bold">Type of Rent</div>
                           <div>Year</div>
                         </div>
                       </div>
@@ -173,7 +173,7 @@ export default class History extends Component {
                   <div className="text-center">
                     <div>
                       <QRCode
-                        size="256"
+                        size={256}
                         style={{ height: "100px", width: "100px" }}
                         value="TYE938"
                       />
@@ -184,7 +184,7 @@ export default class History extends Component {
               </Col>
             </Row>
             <div className="px-3">
-              <table class="table table-striped table-bordered table-sm">
+              <table className="table table-striped table-bordered table-sm">
                 <thead>
                   <tr>
                     <th scope="col">No</th>
@@ -200,20 +200,19 @@ export default class History extends Component {
                     <td>Radif Ganteng</td>
                     <td>Male</td>
                     <td>0853 2034 2342</td>
-                    <td>Long time rent : 1 year</td>
+                    <td>Long time rent : <b className="text-danger float-right">1 Year</b></td>
                   </tr>
                   <tr>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>Total : Rp. 3.000.000</td>
+                    <td>Total : <b className="text-danger float-right">Rp. 3.000.000</b></td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
-
         </div>
       </div>
     );

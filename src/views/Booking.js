@@ -19,7 +19,11 @@ export default class Booking extends Component {
   }
 
   modal = () => {
+    const paid = localStorage.getItem("paid");
     this.setState({ open: !this.state.show });
+    if (paid > 0) {
+      this.setState({ paid: true });
+    }
   };
 
   render() {
@@ -63,28 +67,28 @@ export default class Booking extends Component {
                 </div>
               </Col>
               <Col lg={4} md={12} sm={12}>
-                <div class="p-3 timeline-wrapper">
-                  <ul class="StepProgress">
-                    <li class="StepProgress-item is-done">
+                <div className="p-3 timeline-wrapper">
+                  <ul className="StepProgress">
+                    <li className="StepProgress-item is-done">
                       <div className="d-flex">
                         <div className="mr-4">
-                          <div class="bold">Check-in</div>
+                          <div className="bold">Check-in</div>
                           <div>30 March 2020</div>
                         </div>
                         <div>
-                          <div class="bold">Amenities</div>
+                          <div className="bold">Amenities</div>
                           <div>Furnished</div>
                         </div>
                       </div>
                     </li>
-                    <li class="StepProgress-item is-done">
+                    <li className="StepProgress-item is-done">
                       <div className="d-flex">
                         <div className="mr-4">
-                          <div class="bold">Check-out</div>
+                          <div className="bold">Check-out</div>
                           <div>30 March 2020</div>
                         </div>
                         <div>
-                          <div class="bold">Type of Rent</div>
+                          <div className="bold">Type of Rent</div>
                           <div>Year</div>
                         </div>
                       </div>
@@ -107,7 +111,7 @@ export default class Booking extends Component {
               </Col>
             </Row>
             <div className="px-3">
-              <table class="table table-striped table-bordered table-sm">
+              <table className="table table-striped table-bordered table-sm">
                 <thead>
                   <tr>
                     <th scope="col">No</th>
@@ -142,7 +146,7 @@ export default class Booking extends Component {
               </table>
             </div>
           </div>
-          {paid < 0 ? (
+          {paid < 1 ? (
             <div className="float-right mt-3">
               <button
                 onClick={this.modal}
