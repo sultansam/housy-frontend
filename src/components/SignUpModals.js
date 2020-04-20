@@ -16,7 +16,7 @@ export default class SignUp extends Component {
 
   render() {
     return (
-        <Modal {...this.props}>
+        <Modal centered {...this.props}>
           <div className="text-center p-3">
             <h3 className="pt-3">Sign Up</h3>
           </div>
@@ -90,7 +90,6 @@ export default class SignUp extends Component {
                 <label className="bold" htmlFor="#address">
                   Address
                 </label>
-                <br />
                 <textarea rows="6" cols="50" className="forms" id="#address" />
               </FormGroup>
               <button className="btn-modal">Sign Up</button>

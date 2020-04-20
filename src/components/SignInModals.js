@@ -66,16 +66,6 @@ export default class SignIn extends Component {
                 id="#password"
               />
             </FormGroup>
-            <FormGroup>
-              <label className="bold" htmlFor="#password">
-                Log In As
-              </label>
-              <br />
-              <select onChange={this.select} required className="forms">
-                <option value="0">Tenant</option>
-                <option value="1">Owner</option>
-              </select>
-            </FormGroup>
             <button onClick={this.handleSign} className="btn-modal">
               Sign In
             </button>

@@ -17,7 +17,8 @@ import data from "../data/home.json";
 export default class Detail extends Component {
   state = {
     data: {},
-    load: false
+    load: false,
+    open: false
   };
 
   componentDidMount() {
@@ -31,6 +32,10 @@ export default class Detail extends Component {
     const produk = data[params.id - 1];
     this.setState({ data: produk, load: true });
   }
+
+  order = () => {
+    this.setState({ open: !this.state.show });
+  };
 
   render() {
     const settings = {
@@ -51,6 +56,10 @@ export default class Detail extends Component {
     return (
       <div>
         <Navbar />
+        <Booking
+          show={this.state.open}
+          onHide={() => this.setState({ open: !this.state.open })}
+        />
         {load ? (
           <div>
             <Row className="px-0 pt-3">
@@ -99,14 +108,14 @@ export default class Detail extends Component {
                     <div className="mr-3">
                       <p className="small bold mb-1">Bedrooms</p>
                       <h5>
-                        {data.bedroom}{" "}
+                        {data.bedroom}
                         <img className="icons" src={bed} alt=".." />
                       </h5>
                     </div>
                     <div className="mr-3">
                       <p className="small bold mb-1">Bathrooms</p>
                       <h5>
-                        {data.bathroom}{" "}
+                        {data.bathroom}
                         <img className="icons" src={bathroom} alt=".." />
                       </h5>
                     </div>
@@ -122,7 +131,9 @@ export default class Detail extends Component {
                   </div>
 
                   <div className="float-right">
-                    <Booking />
+                    <button onClick={this.order} className="btn-apply">
+                      Book Now
+                    </button>
                   </div>
                 </div>
               </Col>
