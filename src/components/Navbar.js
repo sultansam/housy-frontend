@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Form } from "react-bootstrap";
+import { Navbar, Form, Nav } from "react-bootstrap";
 import SignIn from "./SignInModals";
 import SignUp from "./SignUpModals";
 import DropdownUser from "./DropdownUser";
@@ -74,20 +74,35 @@ export default class Header extends Component {
               <DropdownUser />
             )
           ) : (
-            <div className="d-flex">
-              <button
-                onClick={this.modal}
-                className="btn-sign btn mr-3 font-weight-bold"
-              >
-                Sign In
-              </button>
-              <button
-                onClick={this.signUp}
-                className="btn-sign btn btn-light font-weight-bold"
-              >
-                Sign Up
-              </button>
-            </div>
+            <>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                  <Nav.Link onClick={this.modal} className="bold">
+                    Login
+                  </Nav.Link>
+                  <Nav.Link onClick={this.signUp} className="bold">
+                    Register
+                  </Nav.Link>
+                </Nav>
+                {/**
+              <div className="d-flex">
+                <button
+                  onClick={this.modal}
+                  className="btn-sign btn mr-3 font-weight-bold"
+                >
+                  Sign In
+                </button>
+                <button
+                  onClick={this.signUp}
+                  className="btn-sign btn btn-light font-weight-bold"
+                >
+                  Sign Up
+                </button>
+              </div>
+               */}
+              </Navbar.Collapse>
+            </>
           )}
         </div>
       </Navbar>

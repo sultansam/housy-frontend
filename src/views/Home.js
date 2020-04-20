@@ -7,7 +7,8 @@ import {
   Col,
   Form,
   ToggleButtonGroup,
-  ToggleButton
+  ToggleButton,
+  Badge
 } from "react-bootstrap";
 import "react-datepicker/dist/react-datepicker.css";
 import Currency from "react-currency-format";
@@ -199,7 +200,18 @@ export default class Home extends Component {
                   <Link to={`/detail/${housy.id}`}>
                     <div>
                       <div className="detail">
-                        <div className="category p-2">{housy.amenities}</div>
+                        <div className="category p-2">
+                          <Badge variant="light" className="mr-2 mb-2">
+                            {housy.amenities}
+                          </Badge>
+                          <Badge variant="light" className="mr-2">
+                            Pet Allowed
+                          </Badge>
+                          <Badge variant="light" className="mr-2">
+                            Shared Accomodation
+                          </Badge>
+                        </div>
+
                         <img
                           className="house-img w-100 mb-2"
                           src={housy.image[0].src}
@@ -211,11 +223,11 @@ export default class Home extends Component {
                             displayType={"text"}
                             thousandSeparator={true}
                             prefix={"Rp "}
-                          />{" "}
+                          />
                           / {housy.typeofrent}
                         </p>
                         <small className="bold">
-                          {housy.bedroom} Beds, {housy.bathroom} Baths,{" "}
+                          {housy.bedroom} Beds, {housy.bathroom} Baths,
                           {housy.area} ft
                         </small>
                         <br />
