@@ -10,50 +10,89 @@ import icon from "../images/icon.svg";
 export default class Header extends Component {
   state = {
     signin: false,
-    owner: 0
+    opens: false,
+    open: false
   };
 
   componentDidMount() {
     const status = localStorage.getItem("login");
     const owner = localStorage.getItem("owner");
     this.setState({ signin: status, owner: owner });
-    
   }
+
+  modal = () => {
+    const paid = localStorage.getItem("paid");
+    this.setState({ opens: !this.state.show });
+    if (paid > 0) {
+      this.setState({ paid: true });
+    }
+  };
+
+  signUp = () => {
+    const paid = localStorage.getItem("paid");
+    this.setState({ open: !this.state.show });
+    if (paid > 0) {
+      this.setState({ paid: true });
+    }
+  };
 
   render() {
     const signin = this.state.signin;
     const owner = this.state.owner;
 
     return (
-      <Navbar bg="white" expand="lg" className="px-0">
-        <Link to="/">
-          <img style={{ height: "50px" }} src={icon} alt=".." />
-        </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Form className="navbar-center">
-            {owner ? null : (
-              <input
-                className="form-box"
-                style={{ maxWidth: "400px" }}
-                placeholder="Search"
-              />
-            )}
-          </Form>
+      <Navbar bg="white" expand="lg" className="shadow py-2 fixed-top">
+        <SignIn
+          show={this.state.opens}
+          onHide={() => this.setState({ opens: !this.state.opens })}
+        />
 
-          {signin ? (
-            owner ? (
-              <DropdownOwner />
+        <SignUp
+          show={this.state.open}
+          onHide={() => this.setState({ open: !this.state.open })}
+        />
+
+        <div className="container py-0">
+          <Link to="/">
+            <img style={{ height: "50px" }} src={icon} alt=".." />
+          </Link>
+
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Form className="navbar-center">
+              {owner ? null : (
+                <input
+                  className="form-box"
+                  style={{ maxWidth: "400px" }}
+                  placeholder="Search"
+                />
+              )}
+            </Form>
+
+            {signin ? (
+              owner ? (
+                <DropdownOwner />
+              ) : (
+                <DropdownUser />
+              )
             ) : (
-              <DropdownUser />
-            )
-          ) : (
-            <div className="d-flex mt-3">
-              <SignIn open={true} />
-              <SignUp />
-            </div>
-          )}
-        </Navbar.Collapse>
+              <div className="d-flex">
+                <button
+                  onClick={this.modal}
+                  className="btn-sign btn mr-3 font-weight-bold"
+                >
+                  Sign In
+                </button>
+                <button
+                  onClick={this.signUp}
+                  className="btn-sign btn btn-light font-weight-bold"
+                >
+                  Sign Up
+                </button>
+              </div>
+            )}
+          </Navbar.Collapse>
+        </div>
       </Navbar>
     );
   }

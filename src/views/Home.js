@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import {
@@ -30,6 +31,7 @@ export default class Home extends Component {
 
     return (
       <>
+        <Navbar />
         <Row className="housy pt-3 px-0">
           <Col lg={4} md={7} sm={12} className="mb-3 px-2">
             <div className="p-2">
@@ -199,8 +201,7 @@ export default class Home extends Component {
                       <div className="detail">
                         <div className="category p-2">{housy.amenities}</div>
                         <img
-                          style={{ maxHeight: "160px" }}
-                          className="w-100 mb-2"
+                          className="house-img w-100 mb-2"
                           src={housy.image[0].src}
                           alt=""
                         />
@@ -210,7 +211,8 @@ export default class Home extends Component {
                             displayType={"text"}
                             thousandSeparator={true}
                             prefix={"Rp "}
-                          /> / {housy.typeofrent}
+                          />{" "}
+                          / {housy.typeofrent}
                         </p>
                         <small className="bold">
                           {housy.bedroom} Beds, {housy.bathroom} Baths,{" "}

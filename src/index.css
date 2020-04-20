@@ -229,7 +229,7 @@ a:hover {
 }
 
 .navbar-center {
-  margin-top: 10px;
+  
   width: 100%;
   text-align: center;
 }
@@ -337,5 +337,20 @@ b {
 
   .modal-backdrop.show {
     opacity: 0.3 !important;
+  }
+}
+
+.margin-top {
+  padding-top: 65px;
+}
+
+.house-img {
+  max-height: 160px;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+  .house-img {
+    max-height: 230px;
   }
 }

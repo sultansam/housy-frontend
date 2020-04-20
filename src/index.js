@@ -26,8 +26,7 @@ const admin = localStorage.getItem("owner");
 
 ReactDOM.render(
   <BrowserRouter>
-    <div className="container pb-5">
-      <Navbar />
+    <div className="container pb-5 margin-top">
       <Switch>
         {admin > 0 ? (
           <Route exact path="/" component={Admin} />

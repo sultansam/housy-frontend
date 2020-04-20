@@ -15,23 +15,14 @@ export default class SignUp extends Component {
   }
 
   render() {
-    const { open } = this.state;
     return (
-      <div>
-        <button
-          onClick={this.toggle}
-          className="btn-sign btn btn-light font-weight-bold"
-        >
-          Sign Up
-        </button>
-        <Modal show={open} onHide={this.toggle}>
-          <Modal.Header closeButton></Modal.Header>
+        <Modal {...this.props}>
           <div className="text-center p-3">
             <h3 className="pt-3">Sign Up</h3>
           </div>
 
           <div className="px-4 pt-0 pb-4">
-            <Form  centered style={{maxHeight: '400px', overflowY:'scroll'}} >
+            <Form centered style={{maxHeight: '400px', overflowY:'scroll'}} >
               <FormGroup>
                 <label className="bold" htmlFor="#fullname">
                   Full Name
@@ -102,12 +93,10 @@ export default class SignUp extends Component {
                 <br />
                 <textarea rows="6" cols="50" className="forms" id="#address" />
               </FormGroup>
-
               <button className="btn-modal">Sign Up</button>
             </Form>
           </div>
         </Modal>
-      </div>
     );
   }
 }

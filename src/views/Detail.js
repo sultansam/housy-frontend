@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Navbar from "../components/Navbar";
 import { Row, Col } from "react-bootstrap";
 import Currency from "react-currency-format";
 
@@ -21,9 +22,11 @@ export default class Detail extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+
     const {
       match: { params }
     } = this.props;
+
     console.log(params.id);
     const produk = data[params.id - 1];
     this.setState({ data: produk, load: true });
@@ -31,7 +34,7 @@ export default class Detail extends Component {
 
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       arrows: false,
       infinite: false,
       edgeFriction: 0,
@@ -47,10 +50,11 @@ export default class Detail extends Component {
 
     return (
       <div>
+        <Navbar />
         {load ? (
           <div>
             <Row className="px-0 pt-3">
-              <Col lg={6} className="mb-5">
+              <Col lg={6} className="mb-3">
                 <div>
                   <Slider {...settings} className="slide-border">
                     {data.image.length > 0
