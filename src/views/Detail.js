@@ -54,7 +54,7 @@ export default class Detail extends Component {
     console.log(data);
 
     return (
-      <div>
+      <div className="margin-top-detail">
         <Navbar />
         <Booking
           show={this.state.open}

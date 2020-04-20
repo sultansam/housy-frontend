@@ -23,6 +23,7 @@ export default class SignIn extends Component {
   /** login handler */
   handleSign = () => {
     localStorage.setItem("login", true);
+    localStorage.setItem("owner", true);
   };
 
   renderRedirect = () => {

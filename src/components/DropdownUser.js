@@ -7,26 +7,26 @@ import logout from "../images/logout.svg";
 import profile from "../images/profile.svg";
 
 export default class User extends Component {
-
   /** handle sign out */
   handleSignOut = () => {
     localStorage.clear();
     window.location.reload(false);
-  }
+  };
 
   render() {
     return (
       <div>
-        <Dropdown>
-          <Dropdown.Toggle className="btn-white p-0 circle">
+        <Dropdown className="pr-0">
+          <Dropdown.Toggle className="nav-link dropdown-toggle user-action p-0 mr-0 bg-dark" style={{borderRadius: "45px"}} >
             <img
-              className="user"
-              src="https://img.icons8.com/plasticine/2x/user.png"
-              alt=".."
+              src="https://www.tutorialrepublic.com/examples/images/avatar/2.jpg"
+              className="avatar"
+              style={{borderRadius: "45px"}} 
+              alt="Avatar"
             />
           </Dropdown.Toggle>
 
-          <Dropdown.Menu className="dropdown-menu-right">
+          <Dropdown.Menu className="dropdown-menu-right mt-2">
             <Link to="/profile" className="dropdown-item">
               <img className="dropdown-icon" src={profile} alt=".." />
               Profile

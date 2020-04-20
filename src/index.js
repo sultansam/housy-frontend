@@ -28,7 +28,7 @@ ReactDOM.render(
   <BrowserRouter>
     <div className="container pb-5 margin-top">
       <Switch>
-        {admin > 0 ? (
+        {admin ? (
           <Route exact path="/" component={Admin} />
         ) : (
           <Route exact path="/" component={Home} />

@@ -41,7 +41,7 @@ export default class Header extends Component {
     const owner = this.state.owner;
 
     return (
-      <Navbar bg="white" expand="lg" className="shadow py-2 fixed-top">
+      <Navbar bg="white" expand="lg" className="shadow py-2 fixed-top px-2">
         <SignIn
           show={this.state.opens}
           onHide={() => this.setState({ opens: !this.state.opens })}
@@ -54,44 +54,41 @@ export default class Header extends Component {
 
         <div className="container py-0">
           <Link to="/">
-            <img style={{ height: "50px" }} src={icon} alt=".." />
+            <img style={{ height: "42px" }} src={icon} alt=".." />
           </Link>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Form className="navbar-center">
-              {owner ? null : (
-                <input
-                  className="form-box"
-                  style={{ maxWidth: "400px" }}
-                  placeholder="Search"
-                />
-              )}
-            </Form>
-
-            {signin ? (
-              owner ? (
-                <DropdownOwner />
-              ) : (
-                <DropdownUser />
-              )
-            ) : (
-              <div className="d-flex">
-                <button
-                  onClick={this.modal}
-                  className="btn-sign btn mr-3 font-weight-bold"
-                >
-                  Sign In
-                </button>
-                <button
-                  onClick={this.signUp}
-                  className="btn-sign btn btn-light font-weight-bold"
-                >
-                  Sign Up
-                </button>
-              </div>
+          <Form className="navbar-center">
+            {owner ? null : (
+              <input
+                className="form-box"
+                style={{ maxWidth: "400px" }}
+                placeholder="Search Housy"
+              />
             )}
-          </Navbar.Collapse>
+          </Form>
+
+          {signin ? (
+            owner ? (
+              <DropdownOwner />
+            ) : (
+              <DropdownUser />
+            )
+          ) : (
+            <div className="d-flex">
+              <button
+                onClick={this.modal}
+                className="btn-sign btn mr-3 font-weight-bold"
+              >
+                Sign In
+              </button>
+              <button
+                onClick={this.signUp}
+                className="btn-sign btn btn-light font-weight-bold"
+              >
+                Sign Up
+              </button>
+            </div>
+          )}
         </div>
       </Navbar>
     );
