@@ -28,13 +28,13 @@ class ListProperty extends React.Component {
                 <div className="col-md-4 mb-3" key={i}>
                   <div className="card">
                     <img
-                      className="img-fluid"
+                      className="card-img-top img-fluid"
                       src={house.images}
                       alt="..."
                     />
                     <div className="p-2">
                       <p className="bold mb-0">{house.name}</p>
-                      <small>Jakarta</small>
+                      <small>{house.city}</small>
                     </div>
                   </div>
                 </div>
