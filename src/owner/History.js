@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import QRCode from "qrcode.react";
-import { Row, Col } from "reactstrap";
+import { Row, Col } from "react-bootstrap";
 import logo from "../assets/img/icon.svg";
 
 import Profile from "../components/Profile";

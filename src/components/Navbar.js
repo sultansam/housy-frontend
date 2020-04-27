@@ -7,8 +7,6 @@ import DropdownUser from "./dropdown/DropdownUser";
 import DropdownOwner from "./dropdown/DropdownOwner";
 import icon from "../assets/img/icon.svg";
 
-//import { Button } from "reactstrap";
-
 export default class Header extends Component {
   state = {
     signin: false,
