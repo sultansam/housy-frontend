@@ -18,16 +18,27 @@ export const getHouseOwner = () => {
   };
 };
 
-export const getHouseList = () => {
+export const getHouseList = (typeRent, belowPrice) => {
   return {
     type: GET_HOUSE_LIST,
     async payload() {
       try {
-        const house = await API.get(
-          `/houses`,
-          setAuthToken(localStorage.getItem("token"))
-        );
-        return house.data;
+        if (typeRent || belowPrice) {
+          const house = await API.get(
+            `/houses`,
+            {
+              params: {
+                typeRent: typeRent,
+                belowPrice: belowPrice
+              }
+            },
+            setAuthToken(localStorage.getItem("token"))
+          );
+          return house.data;
+        } else {
+          const houses = await API.get("/houses");
+          return houses.data;
+        }
       } catch (error) {
         console.log(error);
       }

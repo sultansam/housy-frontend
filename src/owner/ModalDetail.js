@@ -92,7 +92,7 @@ class Detail extends Component {
                       <QRCode
                         size={256}
                         style={{ height: "80px", width: "80px" }}
-                        value="TYE938"
+                        value={orderData.createdAt}
                       />
                     </div>
                     <h4 className="mt-3">TYE938</h4>

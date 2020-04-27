@@ -9,17 +9,25 @@ class AddProperty extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      amenities: []
+      data: {
+        amenities: []
+      },
+      loading: false
     };
   }
 
   handleSelect = e => {
+    const { data } = this.state;
     const value = e.target.value;
-    this.setState({ [e.target.name]: value });
+    this.setState({
+      data: { ...data, [e.target.name]: value }
+    });
   };
 
   handleCheck = e => {
-    const check = this.state.amenities;
+    const check = this.state.data.amenities;
+
+    console.log(check);
     const value = e.target.value;
     const arr = check.includes(value);
 
@@ -31,15 +39,18 @@ class AddProperty extends React.Component {
   };
 
   handleChange = e => {
+    const { data } = this.state;
     const value = e.target.value;
-    this.setState({ [e.target.name]: value });
-    console.log(e.target.value);
+    this.setState({
+      data: { ...data, [e.target.name]: value }
+    });
   };
 
   handleSubmit = e => {
+    this.setState({ loading: true });
     API.post(
       "/house",
-      this.state,
+      this.state.data,
       setAuthToken(localStorage.getItem("token"))
     ).then(res => {
       if (res.status === 200) {
@@ -59,7 +70,7 @@ class AddProperty extends React.Component {
   };
 
   render() {
-    const data = this.state;
+    const { data } = this.state;
 
     return (
       <>
@@ -347,8 +358,15 @@ class AddProperty extends React.Component {
                           Cancel
                         </button>
                       </Link>
-                      <button type="submit" className="btn btn-primary">
-                        Save
+                      <button
+                        type="submit"
+                        className="btn btn-primary"
+                        disabled={this.state.loading}
+                      >
+                        {this.state.loading && (
+                          <div className="btn-loader"></div>
+                        )}
+                        {!this.state.loading && <span>Save</span>}
                       </button>
                     </div>
                   </form>

@@ -20,7 +20,12 @@ class Booking extends React.Component {
     const { data: booking, loading, error } = this.props.booking;
 
     if (error) return <h1>Error</h1>;
-    if (loading) return <h1>x</h1>;
+    if (loading)
+      return (
+        <div id="loader-wrapper">
+          <div id="loader"></div>
+        </div>
+      );
 
     return (
       <>
@@ -88,7 +93,7 @@ class Booking extends React.Component {
                       <QRCode
                         size={256}
                         style={{ height: "80px", width: "80px" }}
-                        value="TYE938"
+                        value={booking.createdAt}
                       />
                     </div>
                     <h4 className="mt-3">TYE938</h4>

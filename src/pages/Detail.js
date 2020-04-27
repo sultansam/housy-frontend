@@ -38,7 +38,14 @@ class Detail extends Component {
     const { data: houseData, loading, error } = this.props.detail;
 
     if (error) return <h1>There's unknown error</h1>;
-    if (loading) return <> </>;
+    if (loading)
+      return (
+        <>
+          <div id="loader-wrapper">
+            <div id="loader"></div>
+          </div>
+        </>
+      );
 
     return (
       <>
