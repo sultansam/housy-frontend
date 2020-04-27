@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <>
         <Navbar />
-        <div className="container py-2">
+        <div className="container py-4">
           <Row className="housy px-0">
             <Col lg={4} md={7} sm={12} className="mb-3 px-2">
               <div className="p-2">

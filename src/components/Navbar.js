@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Form, Nav } from "react-bootstrap";
+import { Navbar, Form } from "react-bootstrap";
 import SignIn from "./modals/SignInModals";
 import SignUp from "./modals/SignUpModals";
 import DropdownUser from "./dropdown/DropdownUser";
 import DropdownOwner from "./dropdown/DropdownOwner";
 import icon from "../assets/img/icon.svg";
 
-import { Button } from "reactstrap";
+//import { Button } from "reactstrap";
 
 export default class Header extends Component {
   state = {
@@ -67,7 +67,7 @@ export default class Header extends Component {
             {stats === "owner" ? null : (
               <input
                 className="form-box"
-                style={{ width: '300px', maxWidth: "300px" }}
+                style={{ width: "300px", maxWidth: "300px" }}
                 placeholder="Search Housy"
               />
             )}
@@ -81,9 +81,26 @@ export default class Header extends Component {
             )
           ) : (
             <>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <div className="d-flex">
+                <button
+                  onClick={this.modal}
+                  className="btn-sign btn mr-3 font-weight-bold"
+                >
+                  SignIn
+                </button>
+                <button
+                  onClick={this.signUp}
+                  className="btn-sign btn btn-light font-weight-bold"
+                >
+                  SignUp
+                </button>
+              </div>
+
+              {/**
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
+                  
                   <Button
                     onClick={this.modal}
                     color="secondary"
@@ -101,23 +118,9 @@ export default class Header extends Component {
                     SignUp
                   </Button>
                 </Nav>
-                {/**
-                <div className="d-flex">
-                  <button
-                    onClick={this.modal}
-                    className="btn-sign btn mr-3 font-weight-bold"
-                  >
-                    SignIn
-                  </button>
-                  <button
-                    onClick={this.signUp}
-                    className="btn-sign btn btn-light font-weight-bold"
-                  >
-                    SignUp
-                  </button>
-                </div>
-                 */}
               </Navbar.Collapse>
+
+                 */}
             </>
           )}
         </div>

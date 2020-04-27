@@ -10,7 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 class Filter extends Component {
   state = {
     startDate: new Date(),
-    budget: null,
+    budget: 0,
     type: ""
   };
 

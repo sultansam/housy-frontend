@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Profile from "../components/Profile";
-import Booking from "../components/Booking";
 
 class History extends React.Component {
   render() {
@@ -26,7 +25,7 @@ class History extends React.Component {
             </div>
             <div className="col">
               <h5>History Transactions</h5>
-              <Booking />
+              
             </div>
           </div>
         </div>

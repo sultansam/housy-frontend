@@ -17,7 +17,7 @@ import AdminHistory from "./owner/History";
 import AdminProfile from "./owner/Profile";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "argon-design-system-react/src/assets/css/argon-design-system-react.css";
+//import "shards-ui/dist/css/shards.min.css";  
 import "./assets/scss/main.scss";
 
 import * as serviceWorker from "./serviceWorker";

@@ -32,7 +32,7 @@ export default class Owner extends Component {
             <img
               src="https://www.eastriseaviation.com/wp-content/uploads/2015/11/blank-profile-picture-200x200.png"
               className="avatar"
-              style={{ height: "35px", width: "35px" }}
+              style={{ height: "35px", width: "35px", borderRadius: "45px" }}
               alt="Avatar"
             />
           </Dropdown.Toggle>

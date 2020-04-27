@@ -17,7 +17,7 @@ class Booking extends React.Component {
   }
 
   render() {
-    const { data: booking, loading, error } = this.props.booking;
+    const { data: detailBooking, loading, error } = this.props.booking;
 
     if (error) return <h1>Error</h1>;
     if (loading)
@@ -29,7 +29,7 @@ class Booking extends React.Component {
 
     return (
       <>
-        {booking && booking.house && (
+        {detailBooking && detailBooking.house && (
           <div className="card pt-3 p-2 mb-3">
             <div className="d-flex px-3 justify-content-between align-items-top">
               <img
@@ -39,16 +39,16 @@ class Booking extends React.Component {
               />
               <div className="text-right">
                 <h5 className="mb-0">INVOICE</h5>
-                <small className="text-muted mb-2">{booking.createdAt}</small>
+                <small className="text-muted mb-2">{detailBooking.createdAt}</small>
               </div>
             </div>
             <Row>
               <Col lg={4} md={12} sm={12} className="mb-3">
                 <div className="p-3">
-                  <h4>House {booking.house.name}</h4>
-                  <p className="small mb-0">{booking.house.address}</p>
+                  <h4>House {detailBooking.house.name}</h4>
+                  <p className="small mb-0">{detailBooking.house.address}</p>
                   <div className="mt-3 bold badge badge-success">
-                    {booking.status}
+                    {detailBooking.status}
                   </div>
                 </div>
               </Col>
@@ -59,12 +59,12 @@ class Booking extends React.Component {
                       <div className="d-flex">
                         <div className="mr-4">
                           <div className="bold">Check-in</div>
-                          <div>{booking.checkin}</div>
+                          <div>{detailBooking.checkin}</div>
                         </div>
                         <div>
                           <div className="bold">Amenities</div>
                           <div>
-                            {booking.house.amenities.map((amn, i) => (
+                            {detailBooking.house.amenities.map((amn, i) => (
                               <small key={i}>{amn}, </small>
                             ))}
                           </div>
@@ -75,11 +75,11 @@ class Booking extends React.Component {
                       <div className="d-flex">
                         <div className="mr-4">
                           <div className="bold">Check-out</div>
-                          <div>{booking.checkout}</div>
+                          <div>{detailBooking.checkout}</div>
                         </div>
                         <div>
                           <div className="bold">Type of Rent</div>
-                          <div>{booking.house.typeRent}</div>
+                          <div>{detailBooking.house.typeRent}</div>
                         </div>
                       </div>
                     </li>
@@ -93,7 +93,7 @@ class Booking extends React.Component {
                       <QRCode
                         size={256}
                         style={{ height: "80px", width: "80px" }}
-                        value={booking.createdAt}
+                        value={detailBooking.createdAt}
                       />
                     </div>
                     <h4 className="mt-3">TYE938</h4>
@@ -115,13 +115,13 @@ class Booking extends React.Component {
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>{booking.user.fullName}</td>
-                    <td>{booking.user.gender}</td>
-                    <td>{booking.user.phone}</td>
+                    <td>{detailBooking.user.fullName}</td>
+                    <td>{detailBooking.user.gender}</td>
+                    <td>{detailBooking.user.phone}</td>
                     <td>
                       Long time rent :
                       <b className="text-danger float-right">
-                        {booking.house.typeRent}
+                        {detailBooking.house.typeRent}
                       </b>
                     </td>
                   </tr>
@@ -133,7 +133,7 @@ class Booking extends React.Component {
                     <td>
                       Total :
                       <b className="text-danger float-right">
-                        {booking.house.price}
+                        {detailBooking.house.price}
                       </b>
                     </td>
                   </tr>
