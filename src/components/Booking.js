@@ -1,6 +1,6 @@
 import React from "react";
 import QRCode from "qrcode.react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col } from "shards-react";
 import logo from "../assets/img/icon.svg";
 
 import { connect } from "react-redux";

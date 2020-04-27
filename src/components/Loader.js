@@ -1,6 +1,6 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col } from "shards-react";
 
 export const Loader = () => {
   return (

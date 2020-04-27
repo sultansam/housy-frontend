@@ -86,7 +86,7 @@ class Bookings extends Component {
                     {!loading && <span>PAY</span>}
                   </button>
                 ) : (
-                  <div className="card bg-secondary text-center p-2 mb-3">
+                  <div className="card text-center p-2 mb-3">
                     <h5 className="m-0 text-uppercase">{data.status}</h5>
                   </div>
                 )}

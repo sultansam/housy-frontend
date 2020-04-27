@@ -5,7 +5,7 @@ import { getHouseList } from "../_actions/house";
 
 import { House } from "../components/Loader";
 
-import { Row, Col } from "react-bootstrap";
+import { Row, Col } from "shards-react";
 import Currency from "react-currency-format";
 
 class Home extends Component {
@@ -26,7 +26,7 @@ class Home extends Component {
             ? houseData.map(housy => (
                 <Col lg={4} className="p-2" key={housy.id}>
                   <Link to={`/detail/${housy.id}`}>
-                    <div className="house-list p-2 border">
+                    <div className="house-list p-2">
                       <div className="detail">
                         <div className="category p-2">
                           {housy.amenities.map((data, i) => (

@@ -4,7 +4,7 @@ import { getDetailHouse } from "../_actions/detail-house";
 
 import Navbar from "../components/Navbar";
 import Currency from "react-currency-format";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col } from "shards-react";
 import Booking from "../components/modals/BookingModal";
 
 import bed from "../assets/img/bed.svg";

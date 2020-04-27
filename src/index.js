@@ -17,7 +17,7 @@ import AdminHistory from "./owner/History";
 import AdminProfile from "./owner/Profile";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-//import "shards-ui/dist/css/shards.min.css";  
+import "shards-ui/dist/css/shards.min.css";  
 import "./assets/scss/main.scss";
 
 import * as serviceWorker from "./serviceWorker";
@@ -27,7 +27,7 @@ const stats = localStorage.getItem("role");
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <div className="px-0 margin-top">
+      <div className="container margin-top">
         {stats === "owner" ? (
           <>
             <Route exact path="/" component={Owner} />

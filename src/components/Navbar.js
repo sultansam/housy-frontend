@@ -44,7 +44,7 @@ export default class Header extends Component {
       <Navbar
         bg="white"
         expand="lg"
-        className="border-bottom py-2 fixed-top px-2"
+        className="shadow py-2 fixed-top px-2"
       >
         <SignIn
           show={this.state.opens}
