@@ -35,20 +35,11 @@ class Bookings extends Component {
     }
   };
 
-  modal = () => {
-    const paid = localStorage.getItem("paid");
-    this.setState({ open: !this.state.show });
-    if (paid > 0) {
-      this.setState({ paid: true });
-    }
-  };
-
   render() {
     const {
       match: { params }
     } = this.props;
     const data = this.props.order.data;
-
     const loading = this.props.order.loading;
 
     return (

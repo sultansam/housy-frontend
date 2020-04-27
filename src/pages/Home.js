@@ -12,8 +12,8 @@ class Home extends Component {
         <Navbar />
         <div className="container py-4">
           <Row className="housy px-0">
-            <Col lg={4} md={7} sm={12} className="mb-3 px-2">
-              <div>
+            <Col lg={4} md={7} sm={12} className="justify-content-center mb-3 p-2">
+              <div style={{maxWidth: 315}}>
                 <Filter />
               </div>
             </Col>
