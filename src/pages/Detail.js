@@ -7,9 +7,6 @@ import Currency from "react-currency-format";
 import { Row, Col } from "react-bootstrap";
 import Booking from "../components/modals/BookingModal";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 import bed from "../assets/img/bed.svg";
 import bathroom from "../assets/img/bathroom.svg";
 
