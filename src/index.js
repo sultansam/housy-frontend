@@ -1,52 +1,52 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Home from "./views/Home";
-import Profile from "./views/Profile";
-import Booking from "./views/Booking";
-import History from "./views/History";
-import SignUp from "./views/SignUp";
-import Detail from "./views/Detail";
+import { Provider } from "react-redux";
+import store from "./_store";
 
-import Admin from "./admin/Home";
-import Add from "./admin/AddProperty";
-import HistoryTrans from "./admin/History";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import Booking from "./pages/Booking";
+import History from "./pages/History";
+import Detail from "./pages/Detail";
+
+import Owner from "./owner/Home";
+import AddProperty from "./owner/AddProperty";
+import AdminHistory from "./owner/History";
+import AdminProfile from "./owner/Profile";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "shards-ui/dist/css/shards.min.css";
-import "./index.css";
-
-import "./styles/main.scss";
+import "argon-design-system-react/src/assets/css/argon-design-system-react.css";
+import "./assets/scss/main.scss";
 
 import * as serviceWorker from "./serviceWorker";
 
-const admin = localStorage.getItem("owner");
+const stats = localStorage.getItem("role");
 
 ReactDOM.render(
-  <BrowserRouter>
-    <div className="container pb-5 margin-top">
-      <Switch>
-        {admin ? (
-          <Route exact path="/" component={Admin} />
+  <Provider store={store}>
+    <Router>
+      <div className="px-0 margin-top">
+        {stats === "owner" ? (
+          <>
+            <Route exact path="/" component={Owner} />
+            <Route exact path="/profile" component={AdminProfile} />
+            <Route exact path="/profile/add" component={AddProperty} />
+            <Route exact path="/profile/history" component={AdminHistory} />
+          </>
         ) : (
-          <Route exact path="/" component={Home} />
+          <>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/history" component={History} />
+            <Route exact path="/detail/:id" component={Detail} />
+            <Route exact path="/booking/:id" component={Booking} />
+          </>
         )}
-
-        <Route exact path="/register" component={SignUp} />
-        <Route exact path="/detail/:id" component={Detail} />
-        <Route exact path="/profile" component={Profile} />
-        <Route exact path="/booking" component={Booking} />
-        <Route exact path="/history" component={History} />
-
-        {/** admin page */}
-
-        <Route exact path="/admin/add" component={Add} />
-        <Route exact path="/admin/history" component={HistoryTrans} />
-      </Switch>
-    </div>
-  </BrowserRouter>,
+      </div>
+    </Router>
+  </Provider>,
   document.getElementById("root")
 );
-serviceWorker.unregister();
+serviceWorker.unregister(); 
