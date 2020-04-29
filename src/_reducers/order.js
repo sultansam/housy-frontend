@@ -1,4 +1,4 @@
-import { GET_ORDERS } from "../_constants/action";
+import { GET_ORDERS, POST_APPROVE } from "../_constants/action";
 
 const initialState = {
   data: [],
@@ -9,17 +9,20 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case `${GET_ORDERS}_PENDING`:
+    case `${POST_APPROVE}_PENDING`:
       return {
         ...state,
         loading: true
       };
     case `${GET_ORDERS}_FULFILLED`:
+    case `${POST_APPROVE}_FULFILLED`:
       return {
         ...state,
         data: action.payload.data,
         loading: false
       };
     case `${GET_ORDERS}_REJECTED`:
+    case `${POST_APPROVE}_REJECTED`:
       return {
         ...state,
         loading: false,

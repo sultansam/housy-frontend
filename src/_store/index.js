@@ -6,7 +6,7 @@ import house from "../_reducers/house";
 import detailHouse from "../_reducers/detail-house";
 import checkout from "../_reducers/checkout";
 
-import { logger, promise } from "../middleware";
+import { logger, promise } from "./middleware";
 
 const middleware = [logger, promise];
 
@@ -17,7 +17,7 @@ const rootReducer = combineReducers({
   detailOrder,
   house,
   detailHouse,
-  checkout
+  checkout,
 });
 
 const store = createStore(rootReducer, applyMiddleware(...middleware));

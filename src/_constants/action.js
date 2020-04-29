@@ -17,3 +17,5 @@ export const GET_DETAIL_HOUSE = "GET_DETAIL_HOUSE";
 
 // CHECKOUT
 export const POST_CHECKOUT = "CHECKOUT";
+
+export const POST_APPROVE = "POST_APPROVE";

@@ -3,8 +3,19 @@ import { Modal, Button, Row, Col } from "react-bootstrap";
 import logo from "../assets/img/icon.svg";
 import QRCode from "qrcode.react";
 import { connect } from "react-redux";
+import { approve } from "../_actions/order";
 
 class Detail extends Component {
+  handleClick = () => {
+    const { data: orderData } = this.props.detail;
+    const id = orderData.id;
+
+    const data = {
+      status: "Approved"
+    };
+    this.props.approve(id, data);
+  };
+
   render() {
     const { data: orderData, loading, error } = this.props.detail;
 
@@ -24,7 +35,6 @@ class Detail extends Component {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        dispatch="true"
       >
         {orderData && orderData.house && (
           <div className="pt-3 p-2 mb-3">
@@ -149,7 +159,7 @@ class Detail extends Component {
                 <Button
                   variant="success"
                   className="bold"
-                  onClick={this.props.onHide}
+                  onClick={this.handleClick}
                 >
                   Approve
                 </Button>
@@ -164,8 +174,15 @@ class Detail extends Component {
 
 const mapStateToProps = state => {
   return {
-    detail: state.detailOrder
+    detail: state.detailOrder,
+    order: state.orders
   };
 };
 
-export default connect(mapStateToProps)(Detail);
+const mapDispatchToProps = dispatch => {
+  return {
+    approve: (id, data) => dispatch(approve(id, data))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Detail);

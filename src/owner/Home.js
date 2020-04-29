@@ -20,6 +20,10 @@ class Home extends Component {
     this.setState({ open: true });
   };
 
+  onHide = () => {
+    this.setState({ open: !this.state.open })
+  }
+
   componentDidMount() {
     this.props.getOrders();
   }
@@ -48,13 +52,15 @@ class Home extends Component {
         </>
       );
 
+      console.log(orderData)
+
     return (
       <>
         <Navbar />
         <Detail
-          data={orderData.id || " "}
+          data={orderData && orderData.id && " "}
           show={this.state.open}
-          onHide={() => this.setState({ open: !this.state.open })}
+          onHide={this.onHide}
         />
         <div className="container py-3">
           <table className="table table-sm">

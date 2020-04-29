@@ -1,4 +1,4 @@
-import { GET_ORDERS } from "../_constants/action";
+import { GET_ORDERS, POST_APPROVE } from "../_constants/action";
 import { API, setAuthToken } from "../config/api";
 
 export const getOrders = () => {
@@ -13,5 +13,23 @@ export const getOrders = () => {
         console.log(error);
       }
     },
+  };
+};
+
+export const approve = (id, data) => {
+  return {
+    type: POST_APPROVE,
+    async payload() {
+      try {
+        const orders = await API.patch(
+          `/order/${id}`,
+          data,
+          setAuthToken(localStorage.getItem("token"))
+        );
+        return orders.data;
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
 };
