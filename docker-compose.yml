@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend1:
+    image: frontend/housy:1.0
+    container_name: frontend1
+    stdin_open: true
+    ports:
+      - 3030:3000
+
+  frontend2:
+    image: frontend/housy:1.0
+    container_name: frontend2
+    stdin_open: true
+    ports:
+      - 3033:3000
