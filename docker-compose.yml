@@ -1,6 +1,7 @@
 version: '3'
 services:
   frontend1:
+    build: .
     image: frontend/housy:1.0
     container_name: frontend1
     stdin_open: true
